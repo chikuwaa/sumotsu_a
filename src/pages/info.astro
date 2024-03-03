@@ -1,0 +1,77 @@
+---
+import '../styles/reset.css';
+import '../styles/style.css';
+
+import Navigation from '../components/Navigation.astro';
+
+const pageTitle = "info";
+
+---
+<html lang="ja">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158818703-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-158818703-1');
+        </script> -->
+  <meta charset="utf-8">
+  <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content={Astro.generator} >
+  <title>info | スモツ</title>
+  <!-- <meta name="description" content=""> -->
+  <!-- <meta name="keywords" content=""> -->
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="robots" content="noindex, follow" />
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400|Noto+Serif+JP:300,400,500&subset=japanese" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+  <!-- <link rel="stylesheet" href="./css/style.css"> -->
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1 class="logo">
+        <a href="./top.html">
+          <img src="./images/logo.png" width="81" height="100" alt="SUMOTSU" />
+        </a>
+      </h1>
+      <Navigation />
+    </header>
+    <main id="info">
+      <h2 class="tit_normal">-about-</h2>
+      <p> 二次創作同人サークル「スモツ」の倉庫サイトです。 </p>
+      <p> 現在は自分のためのとうらぶ長谷部夢を置いています。<br /> 拙い文章ですが性癖を詰めております。<br /> 個人の趣味で作成しておりますので、実在するすべてのものと無関係です。<br /> 記載の内容を夢小説について知らない人が見れるところに置いたり、ゲームや刀剣の公式団体様やイラストレーター様に知らせたりするのはやめてください。 </p>
+      <p> 2022/2/23:脳内が落ち着いたので一旦更新休止(倉庫化)しました </p>
+      <h3 class="tit_normal">-map-</h3>
+      <p>
+        <a href="#">info</a>…ここ<br />
+        <a href="./txt/">txt</a>…夢置き場。糖度高め。名前を呼んでほしいので現パロ多めです。<br />
+        <a href="./clap/">clap</a>…拍手です。現在お礼2種<br />
+      </p>
+      <h3 class="tit_normal">-pass-</h3>
+      <p> 裏っぽいものは個別にパスをつけています。<br /> 未成年の方、小説と現実を混同されがちな方は読むのをご遠慮ください。<br /> パスワード→上皇陛下の誕生日 </p>
+      <h3 class="tit_normal">-master-</h3>
+      <p> サークル名：スモツ<br> サークル主：げそ[<a href="./message.html">〒</a> / <a href="./re.html">re;</a> / <a href="//www.pixiv.net/member.php?id=675880" target="_blank" rel="me">pixiv</a> / <a href="//chikuwageso-log.tumblr.com/" target="_blank" rel="me">log</a>]<br /><br> げそとお呼びください。大昔に成人済みのへしさに♀沼民。<br /> 絶対にネタ被りが発生するのでpixivつないでおりますが、pixivは絵ばかりです。<br /> なにかありましたら郵便マークからメッセージが送れます。ご利用ください。 </p>
+      <h3 class="tit_normal">-site policy-</h3>
+      <p> 個人情報の利用目的やアクセス解析などについては<a href="./policy.html">こちら</a>で記載しています </p>
+    </main>
+    <aside id="pankuzu">
+      <ul class="">
+        <li><a href="./top.html">top</a></li>
+        <li><span>info</span></li>
+      </ul>
+    </aside>
+    <footer>
+      <small class="since">since 2018.09.23</small>
+      <small class="policy"><a href="./policy.html">site policy</a></small>
+      <small class="copywrite">&copy 2018- SUMOTSU, All Rights Reserved.</small>
+    </footer>
+  </div>
+  <!-- <script src="./js/common.js"></script> -->
+</body>
+</html>

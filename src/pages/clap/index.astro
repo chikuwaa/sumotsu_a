@@ -1,0 +1,72 @@
+---
+import '../../styles/reset.css';
+import '../../styles/style.css';
+
+import Navigation from '../../components/Navigation.astro';
+
+const pageTitle = "clap";
+---
+<html lang="ja">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158818703-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-158818703-1');
+        </script> -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>clap | スモツ</title>
+  <!-- <meta name="description" content=""> -->
+  <!-- <meta name="keywords" content=""> -->
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="robots" content="noindex, follow" />
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400|Noto+Serif+JP:300,400,500&subset=japanese" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css"> -->
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1 class="logo">
+        <a href="../top.html">
+          <img src="../images/logo.png" width="81" height="100" alt="SUMOTSU" />
+        </a>
+      </h1>
+      <Navigation />
+    </header>
+    <main id="clap">
+      <p class="naiyou_memo"> ※拍手ありがとうございました！※<br> ※お礼は現在2種類です※ </p>
+      <p> -----<br><br> 例の目薬の話<br> ハートマークあります（文字化けしてたらすみません）<br><br> ----- </p>
+      <p> 朝6時30分。そろりと玄関を開ける。 本丸の中はしんと静まりかえっていて、心の中で「よし」と頷いた。 トートバッグの中にはいつの間にか寝ていたこんのすけ、左手にはドラッグストアの袋。 レジ袋が有料化される前に審神者になって、それ以降現世にあまり帰っていなかったのですっかり忘れていた。 開けた隙間から体を滑り込ませて、カラカラと引き戸を閉める。 このまま静かに自室まで帰れば完全犯罪（犯罪ではないが）の完遂だ。 「主」 「ひっ」 と思ってしまったのがいけなかったのか。 よりによって一番見つかりたくない人の声が後ろから聞こえた。 「どちらに行かれていたんですか。心配しましたよ」 「え、ちょ、ちょっと現世に…」 へへへと笑いながらぎこちなく振り返る。 そこには内番服姿の長谷部が立っていた。 あぁ…よりによって。よりによって…！ 「現世に行くときは共を付けてくださいといつも」 「こんのすけ！こんのすけ連れて行ったから。」 ほらほら、と鞄の中を見せる。 こんのすけを連れて行っておけば何かあってもその場で即時転送が可能だ。 「寝てますが」 「あ、あれー？さっきまで起きてたのに」 寝てたら無理だけど。 はははとまた笑いながら靴を脱ぐ。 このまま押し切るしかない。（長谷部だけに？） 「全く…ほら、鞄をお持ちします」 「あ」 「え？」 呆れた声とともにこんのすけ（鞄）とレジ袋を奪われる。 うろたえた声を出してしまったせいか、長谷部がレジ袋を覗きこんでしまった。 固まる長谷部。 …固まらないで。なんか言って。 「主は、裸眼だったと記憶していますが」 そう言いながらガサリと袋に手を入れる長谷部。 ごめん、やっぱ何も言わないで。 「…どうしてこれを？」 長谷部が取り出したパッケージには「装着液としても使える目薬」の文字と、今私をじっと見てくる目と同じ、藤色と水色の2色が綺麗な涼し気な目元が。 「は、長谷部の絵が描いてあるから…」 ごにょごにょと言うと長谷部はそのパッケージに目線を移した。 「………ふふ」 どこかの本丸の長谷部が叫んでいた「もー主ったら♥」の声が聞こえた気がした。 </p>
+      <div class="clap_repeat boder_dashed">
+        <p class="mb1em">メッセージなしでも送れます。</p>
+        <!-- <form name="clap" method="post" action="../clap/index.html" data-netlify="true" data-netlify-honeypot="bot-field"> -->
+        <form name="clap" action="../clap/clap02.html" data-netlify="true" data-netlify-honeypot="bot-field">
+          <div style="display: none;">
+            <input name="bot-field" />
+          </div>
+          <textarea name="message">ぱちぱち</textarea>
+          <button type="submit">clap</button>
+        </form>
+      </div>
+    </main>
+    <aside id="pankuzu">
+      <ul class="">
+        <li><a href="../top.html">top</a></li>
+        <li><span>clap</span></li>
+      </ul>
+    </aside>
+    <footer>
+      <small class="since">since 2018.09.23</small>
+      <small class="policy"><a href="./policy.html">site policy</a></small>
+      <small class="copywrite">&copy 2018- SUMOTSU, All Rights Reserved.</small>
+    </footer>
+  </div>
+  <!-- <script src="../js/common.js"></script> -->
+</body>
+</html>

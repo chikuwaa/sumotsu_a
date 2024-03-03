@@ -1,0 +1,87 @@
+---
+import '../../styles/reset.css';
+import '../../styles/style.css';
+
+import Navigation from '../../components/Navigation.astro';
+
+const pageTitle = "txt";
+// const txtList = {
+//   txtTitle: [
+//     "長編タイトル",
+//     "中編タイトル",
+//     "中編タイトル（裏）",
+//     "短編",
+//     "拍手ログ"
+//   ],
+//   txtURL: [
+//     "./novelName/",
+//     "./novelName/",
+//     "./novelName/ura/",
+//     "./short/",
+//     "./claplog/"
+//   ],
+//   txtDesc: [
+//     "長編の説明<br>改行タグが使えます",
+//     "中編の説明",
+//     "中編の説明。小説目次の前にワンクッションページが入ります",
+//     "短編の説明",
+//     "下げた拍手置き場"
+//   ],
+// };
+
+---
+<html lang="ja">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{pageTitle} | スモツ</title>
+  <!-- <meta name="description" content=""> -->
+  <!-- <meta name="keywords" content=""> -->
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="robots" content="noindex, follow" />
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400|Noto+Serif+JP:300,400,500&subset=japanese" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="../css/reset.css"> -->
+  <!-- <link rel="stylesheet" href="../css/style.css"> -->
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1 class="logo">
+        <a href="../top.html">
+          <img src="../images/logo.png" width="81" height="100" alt="SUMOTSU" />
+        </a>
+      </h1>
+      <Navigation />
+    </header>
+    <main id="txt">
+      <h2 class="tit_normal">-txt-</h2>
+      <p class="notice boder_dashed"> 名前変換は次のページです。 </p>
+
+      <h3 class="tit_middle"> [<a href="./novelName/">指輪</a>]</h3>
+      <p> 記憶あり転生したへしとさにの話。完結済み。中編ぐらい。 </p>
+      <h3 class="tit_middle"> [<a href="./novelName/">やさしさと幼虫</a>]</h3>
+      <p> 現パロ。ご都合主義バンザイ。完結済み。途中裏があるので要パスワードです。 </p>
+      <h3 class="tit_middle"> [<a href="./novelName/">主夫見習い長谷部</a>]</h3>
+      <p> タイトル通りの現パロ。元々短編にあったやつですが増えてきたので分けました。 </p>
+      <h3 class="tit_middle"> [<a href="./short/">短編</a>]</h3>
+      <p> ほぼ長谷部しか出てこない。恋愛要素のないものもあります。<br /> だいたい名前変換なし。 </p>
+      <h3 class="tit_middle"> [<a href="./claplog/">拍手ログ</a>]</h3>
+      <p> 下げた拍手置き場。更新きまぐれです。 </p>
+    </main>
+    <aside id="pankuzu">
+      <ul class="">
+        <li><a href="../top.html">top</a></li>
+        <li><span>{pageTitle}</span></li>
+      </ul>
+    </aside>
+    <footer>
+      <small class="since">since 2018.09.23</small>
+      <small class="policy"><a href="./policy.html">site policy</a></small>
+      <small class="copywrite">&copy 2018- SUMOTSU, All Rights Reserved.</small>
+    </footer>
+  </div>
+  <!-- <script src="../js/common.js"></script> -->
+</body>
+</html>

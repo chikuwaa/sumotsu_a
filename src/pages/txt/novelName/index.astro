@@ -1,0 +1,115 @@
+---
+import '../../../styles/reset.css';
+import '../../../styles/style.css';
+
+import Navigation from '../../../components/Navigation.astro';
+
+const pageTitle = "小説タイトル";
+---
+<html lang="ja">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158818703-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-158818703-1');
+        </script> -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小説タイトル | txt | スモツ</title>
+  <!-- <meta name="description" content=""> -->
+  <!-- <meta name="keywords" content=""> -->
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="robots" content="noindex, follow" />
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400|Noto+Serif+JP:300,400,500&subset=japanese" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/style.css"> -->
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1 class="logo">
+        <a href="../../top.html">
+          <img src="../../images/logo.png" width="81" height="100" alt="SUMOTSU" />
+        </a>
+      </h1>
+      <Navigation />
+    </header>
+    <main id="novelList">
+      <h2 class="tit_middle">[指輪]</h2>
+      <button onclick="nameChangeOpen();" class="nameChangeBlock_btn">名前変換</button>
+      <div id="nameChangeBlock" class="">
+        <div class="nameChangeBlock_in boder_dashed">
+          <p> 登録名：<span class="charmname1">高橋</span><span class="charmname3">真木</span><br> 長谷部は「長谷部国重」です。 </p>
+          <!-- 名前入力フォーム -->
+          <p class="input_name"> 苗字 <input type="text" id="charmname1" class="charm" value="高橋">
+          </p>
+          <p class="input_name"> 名前 <input type="text" id="charmname3" class="charm" value="真木">
+          </p>
+          <div class="nameBtn">
+            <div class="box_wrap">
+              <input type="checkbox" id="record_check" name="record_check" value="登録を保存する" onchange="changeBtn()">
+              <label for="record_check" class="checkbox01"> 登録を保存する </label>
+            </div>
+            <!-- 登録ボタンと削除ボタン -->
+            <button type="button" id="charmset" style="display: none;">登録</button>
+            <button type="button" id="charmsession">登録</button>
+            <button type="button" id="charmunset">削除</button>
+          </div>
+          <p class="tit_small"> 「登録を保存する」とブラウザを閉じても名前が登録されたままになります </p>
+        </div>
+      </div>
+      <ul class="novelLinkList">
+        <li>
+          <a href="./novel1/">1. 再会</a>
+          <p class="naiyou_memo"></p>
+        </li>
+        <li>
+          <a href="./novel1.html">2. 先輩</a>
+          <p class="naiyou_memo"></p>
+        </li>
+        <li>
+          <a href="./novel1.html">3. 関係</a>
+          <p class="naiyou_memo"></p>
+        </li>
+        <li>
+          <a href="./novel1.html">4. 彼女</a>
+          <p class="naiyou_memo"></p>
+        </li>
+        <li>
+          <a href="./novel1.html">5. 恋人</a>
+          <p class="naiyou_memo"></p>
+        </li>
+        <li>
+          <a href="./novel1.html">6. 幸福</a>
+          <p class="naiyou_memo"></p>
+        </li>
+        <li>
+          <a href="./novel1.html">番外編:後輩Aの考察</a>
+          <p class="naiyou_memo"></p>
+        </li>
+      </ul>
+    </main>
+    <aside id="pankuzu">
+      <ul class="">
+        <li><a href="../../top.html">top</a></li>
+        <li><a href="../">txt</a></li>
+        <li><span>小説タイトル</span></li>
+      </ul>
+    </aside>
+    <footer>
+      <small class="since">since 2018.09.23</small>
+      <small class="policy"><a href="./policy.html">site policy</a></small>
+      <small class="copywrite">&copy 2018- SUMOTSU, All Rights Reserved.</small>
+    </footer>
+  </div>
+  <!-- <script src="../../js/common.js"></script>
+  <script src="../../js/lib/charm.js"></script>
+  <script src="../../js/novel.js"></script>
+  <script src="../../js/ura.js"></script> -->
+</body>
+</html>

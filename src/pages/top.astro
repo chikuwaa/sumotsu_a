@@ -1,7 +1,12 @@
 ---
 import '../styles/reset.css';
 import '../styles/style.css';
-const pageTitle = "スモツ";
+
+import Navigation from '../components/Navigation.astro';
+
+const pageTitle = "top";
+
+
 ---
 <html lang="ja">
 <head>
@@ -15,10 +20,8 @@ const pageTitle = "スモツ";
         gtag('config', 'UA-158818703-1');
         </script> -->
   <meta charset="utf-8">
-  <link rel="icon" type="image/svg+xml" href="/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content={Astro.generator} >
-  <title>{pageTitle}</title>
+  <title>{pageTitle} | スモツ</title>
   <!-- <meta name="description" content=""> -->
   <!-- <meta name="keywords" content=""> -->
   <meta http-equiv="Content-Script-Type" content="text/javascript">
@@ -26,33 +29,38 @@ const pageTitle = "スモツ";
   <meta name="robots" content="noindex, follow" />
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400|Noto+Serif+JP:300,400,500&subset=japanese" rel="stylesheet">
   <!-- <link rel="stylesheet" href="./css/reset.css"> -->
-  <!-- <link rel="stylesheet" href="./css/style.css"> -->
+  <!-- <link rel="stylesheet" href="./css/style\.css"> -->
 </head>
 <body>
   <div class="wrap">
     <header>
       <h1 class="logo">
-        <a href="./">
+        <a href="/top/">
           <img src="./images/logo.png" width="81" height="100" alt="SUMOTSU" />
         </a>
       </h1>
+      <Navigation />
     </header>
-    <main id="enter">
-      <p> 二次創作同人サークル「スモツ」の倉庫サイトです。<br> 現在はとうらぶ長谷部の夢小説のみ格納済み。 </p>
-      <p> パスワードは長谷部通常の刀帳番号 </p>
-      <div class="pass_from">
-        <label for="pass">password</label>
-        <input name="pass" type="password" class="" id="pass">
-        <button type="submit" onclick="enterPage()">enter</button>
-      </div>
-      <p id="search-result"></p>
+    <main id="index">
+      <p class="txt_update">
+        <!-- <a href="./novel/3/">0906</a> / txt 短編 +1 --> 240229 / サイト移転<br />
+        <a href="./txt/short/novel1.html">23?0806</a> / txt 短編 +1<br /> (休止継続中ですが1本書けたので上げました)
+      </p>
+      <p class="notice"> 2022/02/23から更新休止中(倉庫化) </p>
+      <h2 class="tit_small">登録サーチ↓</h2>
+      <a href="//dream-search.info/link/rank.php?mode=r_link&id=23850" title="D+S(DREAM SEARCH)" target="_blank">D+S</a>
     </main>
+    <aside id="pankuzu">
+      <ul class="">
+        <li><a href="./top.html">{pageTitle}</a></li>
+      </ul>
+    </aside>
     <footer>
       <small class="since">since 2018.09.23</small>
+      <small class="policy"><a href="./policy.html">site policy</a></small>
       <small class="copywrite">&copy 2018- SUMOTSU, All Rights Reserved.</small>
     </footer>
   </div>
-  <!-- <script src="./js/jquery.min.js"></script> -->
-  <!-- <script src="./js/index.js"></script> -->
+  <!-- <script src="./js/common.js"></script> -->
 </body>
 </html>
