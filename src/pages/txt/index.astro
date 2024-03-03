@@ -3,31 +3,10 @@ import '../../styles/reset.css';
 import '../../styles/style.css';
 
 import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import NovelTitle from '../../components/NovelTitile.astro';
 
 const pageTitle = "txt";
-// const txtList = {
-//   txtTitle: [
-//     "長編タイトル",
-//     "中編タイトル",
-//     "中編タイトル（裏）",
-//     "短編",
-//     "拍手ログ"
-//   ],
-//   txtURL: [
-//     "./novelName/",
-//     "./novelName/",
-//     "./novelName/ura/",
-//     "./short/",
-//     "./claplog/"
-//   ],
-//   txtDesc: [
-//     "長編の説明<br>改行タグが使えます",
-//     "中編の説明",
-//     "中編の説明。小説目次の前にワンクッションページが入ります",
-//     "短編の説明",
-//     "下げた拍手置き場"
-//   ],
-// };
 
 ---
 <html lang="ja">
@@ -59,16 +38,12 @@ const pageTitle = "txt";
       <h2 class="tit_normal">-txt-</h2>
       <p class="notice boder_dashed"> 名前変換は次のページです。 </p>
 
-      <h3 class="tit_middle"> [<a href="./novelName/">指輪</a>]</h3>
-      <p> 記憶あり転生したへしとさにの話。完結済み。中編ぐらい。 </p>
-      <h3 class="tit_middle"> [<a href="./novelName/">やさしさと幼虫</a>]</h3>
-      <p> 現パロ。ご都合主義バンザイ。完結済み。途中裏があるので要パスワードです。 </p>
-      <h3 class="tit_middle"> [<a href="./novelName/">主夫見習い長谷部</a>]</h3>
-      <p> タイトル通りの現パロ。元々短編にあったやつですが増えてきたので分けました。 </p>
-      <h3 class="tit_middle"> [<a href="./short/">短編</a>]</h3>
-      <p> ほぼ長谷部しか出てこない。恋愛要素のないものもあります。<br /> だいたい名前変換なし。 </p>
-      <h3 class="tit_middle"> [<a href="./claplog/">拍手ログ</a>]</h3>
-      <p> 下げた拍手置き場。更新きまぐれです。 </p>
+      <NovelTitle tit="長編タイトル" url="./novelName/" desc="長編の説明<br>改行タグが使えます"/>
+      <NovelTitle tit="中編タイトル" url="./novelName/" desc="中編の説明"/>
+      <NovelTitle tit="中編タイトル（裏）" url="./ura/" desc="中編の説明。小説目次の前にワンクッションページが入ります" uratarget="novelName"/>
+      <NovelTitle tit="短編" url="./short/" desc="短編の説明"/>
+      <NovelTitle tit="拍手ログ" url="./claplog/" desc="下げた拍手置き場"/>
+
     </main>
     <aside id="pankuzu">
       <ul class="">
@@ -76,11 +51,7 @@ const pageTitle = "txt";
         <li><span>{pageTitle}</span></li>
       </ul>
     </aside>
-    <footer>
-      <small class="since">since 2018.09.23</small>
-      <small class="policy"><a href="./policy.html">site policy</a></small>
-      <small class="copywrite">&copy 2018- SUMOTSU, All Rights Reserved.</small>
-    </footer>
+    <Footer />
   </div>
   <!-- <script src="../js/common.js"></script> -->
 </body>
