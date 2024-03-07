@@ -2,6 +2,7 @@
 import '../styles/reset.css';
 import '../styles/style.css';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 const pageTitle = "スモツ";
 ---
 <html lang="ja">
@@ -38,16 +39,16 @@ const pageTitle = "スモツ";
       <div class="pass_from">
         <label for="pass">password</label>
         <input name="pass" type="password" class="" id="pass">
-        <button type="submit" onclick="enterPage()">enter</button>
+        <button type="submit" id="enterPage">enter</button>
       </div>
       <p id="search-result"></p>
     </main>
-    <footer>
-      <small class="since">since 2018.09.23</small>
-      <small class="copywrite">&copy 2018- SUMOTSU, All Rights Reserved.</small>
-    </footer>
+    <Footer pankuzuLists={[
+      { name: pageTitle }
+    ]}/>
   </div>
-  <!-- <script src="./js/jquery.min.js"></script> -->
-  <!-- <script src="./js/index.js"></script> -->
+  <script>
+    import "../scripts/index.js";
+  </script>
 </body>
 </html>

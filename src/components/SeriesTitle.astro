@@ -1,7 +1,7 @@
 ---
 const { tit, url , desc , uratarget } = Astro.props;
 ---
-<h3 class="tit_middle"> [<a href={url} id={uratarget}>{tit}</a>]</h3>
+<h3 class="tit_middle js-novelLink"> [<a href={url} id={uratarget}>{tit}</a>]</h3>
 <p set:html={desc}></p>
 
 <script>

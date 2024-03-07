@@ -4,7 +4,6 @@ import '../styles/reset.css';
 import '../styles/style.css';
 
 import Header from '../components/Header.astro';
-import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 
 const pageTitle = "re";
@@ -34,14 +33,7 @@ const pageTitle = "re";
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <h1 class="logo">
-        <a href="./top.html">
-          <img src="./images/logo.png" width="81" height="100" alt="SUMOTSU" />
-        </a>
-      </h1>
-      <Navigation />
-    </header>
+    <Header tit={pageTitle} />
     <main id="re">
       <h2 class="tit_normal">-re-</h2>
       <article class="replay">
@@ -82,14 +74,12 @@ const pageTitle = "re";
         </ul>
       </div>
     </main>
-    <aside id="pankuzu">
-      <ul class="">
-        <li><a href="./top.html">top</a></li>
-        <li><span>re</span></li>
-      </ul>
-    </aside>
-    <Footer />
+    <Footer pankuzuLists={[
+      {name: pageTitle }
+    ]}/>
   </div>
-  <!-- <script src="./js/common.js"></script> -->
+  <script>
+    import "../scripts/common.js";
+  </script>
 </body>
 </html>

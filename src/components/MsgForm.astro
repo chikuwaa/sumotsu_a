@@ -2,47 +2,31 @@
 
 ---
 <form method="post" name="message" data-netlify="true">
-    <dl class="formTable">
-      <dt>ご用件</dt>
-    </dl>
-
-  <table class="formTable">
-    <tr>
-      <th>ご用件</th>
-      <td class="select">
-        <select name="ご用件">
-          <option value="">選択してください</option>
-          <option value="ご質問・お問い合わせ">ご質問・お問い合わせ</option>
-          <option value="誤字・サイト不具合の連絡">誤字・サイト不具合の連絡</option>
-          <option value="その他">その他</option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <th>お名前</th>
-      <td><input size="20" type="text" class="wide" name="お名前" /></td>
-    </tr>
-    <tr>
-      <th>返信要否</th>
-      <td>
-        <div class="box_br">
-          <div class="box_wrap">
-            <input type="checkbox" id="hensinhuyo" name="replay_not_need" value="返信不要">
-            <label for="hensinhuyo" class="checkbox01"> 返信不要 </label>
-          </div>
-          <p class="note">返信不要の場合はチェックを入れてください</p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <th>Mail（半角）</th>
-      <td><input size="30" type="text" class="wide" name="Email" /></td>
-    </tr>
-    <tr>
-      <th>お問い合わせ内容 <span>必須</span></th>
-      <td><textarea name="お問い合わせ内容" cols="50" rows="5" required></textarea></td>
-    </tr>
-  </table>
+  <dl class="formTable">
+    <dt> ご用件 </dt>
+    <dd class="select">
+      <select name="ご用件">
+        <option value="">選択してください</option>
+        <option value="ご質問・お問い合わせ">ご質問・お問い合わせ</option>
+        <option value="誤字・サイト不具合の連絡">誤字・サイト不具合の連絡</option>
+        <option value="その他">その他</option>
+      </select>
+    </dd>
+    <dt>お名前</dt>
+    <dd><input size="20" type="text" class="wide" name="お名前" /></dd>
+    <dt>返信要否</dt>
+    <dd>
+      <div class="box_wrap">
+        <input type="checkbox" id="hensinhuyo" name="replay_not_need" value="返信不要">
+        <label for="hensinhuyo" class="checkbox01"> 返信不要 </label>
+      </div>
+      <p class="note">返信不要の場合はチェックを入れてください</p>
+    </dd>
+    <dt>Mail（半角）</dt>
+    <dd><input size="30" type="text" class="wide" name="Email" /></dd>
+    <dt>お問い合わせ内容 <span>必須</span></dt>
+    <dd><textarea name="お問い合わせ内容" cols="50" rows="5" required></textarea></dd>
+  </dl>
   <div class="con_pri">
     <div class="box_pri">
       <div class="box_tori">
@@ -60,5 +44,4 @@
   <p class="btn">
     <span><input type="submit" value="　 確認 　" /></span>
   </p>
-  </>
 </form>

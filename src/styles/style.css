@@ -353,22 +353,34 @@ main {
 #message .box_con03 form {
   width: 100%;
 }
-#message .box_con03 form table {
+#message .box_con03 form .formTable {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
-#message .box_con03 form table tr {
+#message .box_con03 form .formTable dt, #message .box_con03 form .formTable dd {
   position: relative;
 }
-#message .box_con03 form table tr th {
+#message .box_con03 form .formTable dt {
   width: 30%;
   padding: 1em 0em;
-  position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  vertical-align: middle;
+}
+@media only screen and (max-width: 768px) {
+  #message .box_con03 form .formTable dt {
+    border: 1px dashed #ccc;
+    border-right: none;
+    border-left: none;
+    width: 100%;
+    padding: 0.8em 0.5em;
+  }
 }
 @media only screen and (min-width: 769px) {
-  #message .box_con03 form table tr th:before {
+  #message .box_con03 form .formTable dt::before {
     content: "";
     width: 2px;
     border-right: 1px dashed #aaaaaa;
@@ -378,17 +390,7 @@ main {
     right: 0;
   }
 }
-@media only screen and (max-width: 768px) {
-  #message .box_con03 form table tr th {
-    border: 1px dashed #ccc;
-    border-right: none;
-    border-left: none;
-    width: 100%;
-    display: block;
-    padding: 0.8em 0.5em;
-  }
-}
-#message .box_con03 form table tr th span {
+#message .box_con03 form .formTable dt span {
   background: #8C54A1;
   padding: 0 0.3em;
   color: #fff;
@@ -396,7 +398,8 @@ main {
           box-sizing: border-box;
   display: inline-block;
 }
-#message .box_con03 form table tr td {
+#message .box_con03 form .formTable dd {
+  width: 70%;
   position: relative;
   padding: 1em;
   padding-right: 0px;
@@ -404,26 +407,15 @@ main {
           box-sizing: border-box;
 }
 @media only screen and (max-width: 768px) {
-  #message .box_con03 form table tr td {
+  #message .box_con03 form .formTable dd {
     padding: 1em 0px;
-    display: block;
     width: 100%;
   }
 }
-#message .box_con03 form table tr .box_br {
-  display: block;
-}
-#message .box_con03 form table tr select, #message .box_con03 form table tr textarea, #message .box_con03 form table tr .wide {
-  width: 100%;
-  height: 3em;
-  padding: 0.5em;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-#message .box_con03 form table td.select {
+#message .box_con03 form .formTable dd.select {
   position: relative;
 }
-#message .box_con03 form table td.select::after {
+#message .box_con03 form .formTable dd.select::after {
   display: block;
   content: "";
   border: solid 2px #aaaaaa;
@@ -439,7 +431,14 @@ main {
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
           transform: translate(-50%, -50%) rotate(45deg);
 }
-#message .box_con03 form table tr textarea {
+#message .box_con03 form .formTable select, #message .box_con03 form .formTable textarea, #message .box_con03 form .formTable .wide {
+  width: 100%;
+  height: 3em;
+  padding: 0.5em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+#message .box_con03 form .formTable textarea {
   height: 10em;
 }
 #message .con_pri .box_pri {

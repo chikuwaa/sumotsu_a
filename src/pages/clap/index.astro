@@ -32,7 +32,7 @@ const pageTitle = "clap";
 </head>
 <body>
   <div class="wrap">
-    <Header />
+    <Header tit={pageTitle} />
     <main id="clap">
       <p class="naiyou_memo"> ※拍手ありがとうございました！※<br> ※お礼は現在2種類です※ </p>
       <p> -----<br><br> 例の目薬の話<br> ハートマークあります（文字化けしてたらすみません）<br><br> ----- </p>
@@ -49,14 +49,12 @@ const pageTitle = "clap";
         </form>
       </div>
     </main>
-    <aside id="pankuzu">
-      <ul class="">
-        <li><a href="../top.html">top</a></li>
-        <li><span>clap</span></li>
-      </ul>
-    </aside>
-    <Footer />
+    <Footer pankuzuLists={[
+      { name: pageTitle }
+    ]}/>
   </div>
-  <!-- <script src="../js/common.js"></script> -->
+  <script>
+    import "../../scripts/common.js";
+  </script>
 </body>
 </html>

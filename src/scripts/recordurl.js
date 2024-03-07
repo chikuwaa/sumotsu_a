@@ -3,14 +3,15 @@ function recordUrl(u){
   sessionStorage.setItem('sumotsu_url', u );
 }
 // ページ内から`tit_middle`クラスを持つすべての要素を探す。
-const titLink = document.querySelectorAll('.tit_middle');
+const titLink = document.querySelectorAll('.js-novelLink');
 
 // 各タイトルがクリックされたときのハンドリング
 titLink.forEach((tit) => {
   // ID要素があるときだけ
   if(tit.children[0].id){
     tit.children[0].addEventListener('click',function(){
-      recordUrl(tit.children[0].id)
+      // console.log(window.location.href+tit.children[0].id+"/");
+      recordUrl(window.location.href+tit.children[0].id+"/")
     });
   }
 

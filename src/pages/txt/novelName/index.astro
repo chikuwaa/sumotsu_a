@@ -3,8 +3,8 @@ import '../../../styles/reset.css';
 import '../../../styles/style.css';
 
 import Header from '../../../components/Header.astro';
-import Pankuzu from '../../../components/Breadcrumb.astro';
 import Footer from '../../../components/Footer.astro';
+import NovelTitle from '../../../components/NovelTitle.astro';
 
 const pageTitle = "小説タイトル";
 
@@ -34,10 +34,10 @@ const pageTitle = "小説タイトル";
 </head>
 <body>
   <div class="wrap">
-   <Header />
+    <Header tit={pageTitle} />
     <main id="novelList">
-      <h2 class="tit_middle">[指輪]</h2>
-      <button onclick="nameChangeOpen();" class="nameChangeBlock_btn">名前変換</button>
+      <h2 class="tit_middle">[長編タイトル]</h2>
+      <button id="nameChangeOpen" class="nameChangeBlock_btn">名前変換</button>
       <div id="nameChangeBlock" class="">
         <div class="nameChangeBlock_in boder_dashed">
           <p> 登録名：<span class="charmname1">高橋</span><span class="charmname3">真木</span><br> 長谷部は「長谷部国重」です。 </p>
@@ -48,7 +48,7 @@ const pageTitle = "小説タイトル";
           </p>
           <div class="nameBtn">
             <div class="box_wrap">
-              <input type="checkbox" id="record_check" name="record_check" value="登録を保存する" onchange="changeBtn()">
+              <input type="checkbox" id="record_check" name="record_check" value="登録を保存する">
               <label for="record_check" class="checkbox01"> 登録を保存する </label>
             </div>
             <!-- 登録ボタンと削除ボタン -->
@@ -60,45 +60,20 @@ const pageTitle = "小説タイトル";
         </div>
       </div>
       <ul class="novelLinkList">
-        <li>
-          <a href="./novel1/">1. 再会</a>
-          <p class="naiyou_memo"></p>
-        </li>
-        <li>
-          <a href="./novel1.html">2. 先輩</a>
-          <p class="naiyou_memo"></p>
-        </li>
-        <li>
-          <a href="./novel1.html">3. 関係</a>
-          <p class="naiyou_memo"></p>
-        </li>
-        <li>
-          <a href="./novel1.html">4. 彼女</a>
-          <p class="naiyou_memo"></p>
-        </li>
-        <li>
-          <a href="./novel1.html">5. 恋人</a>
-          <p class="naiyou_memo"></p>
-        </li>
-        <li>
-          <a href="./novel1.html">6. 幸福</a>
-          <p class="naiyou_memo"></p>
-        </li>
-        <li>
-          <a href="./novel1.html">番外編:後輩Aの考察</a>
-          <p class="naiyou_memo"></p>
-        </li>
+        <NovelTitle tit="1. サンプル" url="./novel1/"/>
+        <NovelTitle tit="2. 裏サンプル" url="../ura/" uratarget="novel1" />
+        <NovelTitle tit="サンプル" url="./novel1/" desc="番外編。説明が追加できます" />
       </ul>
     </main>
-    <Pankuzu lists={[
+    <Footer pankuzuLists={[
       { name: "txt", path: "txt/" },
       { name: pageTitle }
     ]}/>
-    <Footer />
   </div>
-  <!-- <script src="../../js/common.js"></script>
-  <script src="../../js/lib/charm.js"></script>
-  <script src="../../js/novel.js"></script> -->
-  <!-- <script src="../../js/ura.js"></script> -->
+  <script>
+    import "../../../scripts/common.js";
+    import "../../../scripts/lib/charm.js";
+    import "../../../scripts/novel.js";
+  </script>
 </body>
 </html>

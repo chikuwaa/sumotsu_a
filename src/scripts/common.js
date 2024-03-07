@@ -4,6 +4,6 @@ window.onload = function(){
 
   // ログインしてなかったらログインページに戻る
   if( ! login_status ){
-    window.location.href = './index.html';
+    window.location.href = '/';
   }
 }

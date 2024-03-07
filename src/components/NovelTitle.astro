@@ -1,0 +1,11 @@
+---
+const { tit, url , desc , uratarget } = Astro.props;
+---
+<li class="js-novelLink">
+  <a href={url} id={uratarget}>{tit}</a>
+  <p class="naiyou_memo" set:html={desc}></p>
+</li>
+
+<script>
+  import "../scripts/recordurl.js";
+</script>

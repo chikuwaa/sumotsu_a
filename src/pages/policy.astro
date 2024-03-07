@@ -3,7 +3,6 @@ import '../styles/reset.css';
 import '../styles/style.css';
 
 import Header from '../components/Header.astro';
-import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 
 const pageTitle = "policy";
@@ -33,14 +32,7 @@ const pageTitle = "policy";
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <h1 class="logo">
-        <a href="./top.html">
-          <img src="./images/logo.png" width="81" height="100" alt="SUMOTSU" />
-        </a>
-      </h1>
-      <Navigation />
-    </header>
+    <Header tit={pageTitle} />
     <main id="info">
       <h2 class="tit_normal">-site policy-</h2>
       <h3 class="tit_middle">個人情報の利用目的</h3>
@@ -56,14 +48,12 @@ const pageTitle = "policy";
       <h3 class="tit_middle">著作権について</h3>
       <p> 刀剣乱舞の二次創作活動については、ニトロプラス社によるガイドラインを確認の上創作し、発表しております。<br> www.nitroplus.co.jp/license/<br> （https:// を追加することでガイドラインページに飛ぶことができます。）<br><br> 当サイトに掲載している文章や画像などについては、転載することを禁止します。<br> 当サイトは著作権の侵害を目的としたものではありません。著作権に関して問題がございましたら、<a href=""></a>お問い合わせフォームよりご連絡ください。迅速に対応いたします。 </p>
     </main>
-    <aside id="pankuzu">
-      <ul class="">
-        <li><a href="./top.html">top</a></li>
-        <li><span>policy</span></li>
-      </ul>
-    </aside>
-    <Footer />
+    <Footer pankuzuLists={[
+      {name: pageTitle }
+    ]}/>
   </div>
-  <!-- <script src="./js/common.js"></script> -->
+  <script>
+    import "../scripts/common.js";
+  </script>
 </body>
 </html>

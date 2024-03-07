@@ -1,4 +1,7 @@
 // console.log("ura.js");
+document.querySelector('#passCheck').addEventListener('click', () => {
+  passCheck();
+});
 
 function passCheck(){
   const inputPassword = document.querySelector('#pass').value;
@@ -16,7 +19,7 @@ function loginFunc(p) {
       searchResult.textContent = '認証しました';
       //ターゲットへ遷移
       setTimeout(function(){
-        window.location.href = './'+targetUrl+'.html';
+        window.location.href = targetUrl;
       },500);
     }else{
       searchResult.textContent = 'パスワードが違います';

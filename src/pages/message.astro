@@ -40,14 +40,12 @@ const pageTitle = "message";
     <MsgForm />
       </div>
     </main>
-    <aside id="pankuzu">
-      <ul class="">
-        <li><a href="./top.html">top</a></li>
-        <li><span>message</span></li>
-      </ul>
-    </aside>
-    <Footer />
+    <Footer pankuzuLists={[
+      {name: pageTitle }
+    ]}/>
   </div>
-  <!-- <script src="./js/common.js"></script> -->
+  <script>
+    import "../scripts/common.js";
+  </script>
 </body>
 </html>

@@ -1,7 +1,13 @@
+document.querySelector('#nameChangeOpen').addEventListener('click', () => {
+  nameChangeOpen();
+});
+document.querySelector('#record_check').addEventListener('click', () => {
+  changeBtn();
+});
+
 function nameChangeOpen(){
   const nameChangeElem = document.getElementById("nameChangeBlock");
   const nameChangeInElem = document.getElementById("nameChangeBlock").children;
-  // console.log(nameChangeInElem[0].clientHeight);
 
   if(nameChangeElem.classList.contains("open")){
     nameChangeElem.style.height = "0px";
