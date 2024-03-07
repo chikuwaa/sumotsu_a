@@ -1,5 +1,7 @@
 ---
+const {tit} = Astro.props;
 ---
+{tit !== "index" &&
 <nav>
   <a href="/info/" class="">info</a>
   <a href="/txt/" class="">txt</a>
@@ -12,3 +14,4 @@
     <button type="submit">clap</button>
   </form>
 </nav>
+}

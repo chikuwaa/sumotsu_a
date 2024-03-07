@@ -2,10 +2,12 @@
 import '../../../styles/reset.css';
 import '../../../styles/style.css';
 
-import Navigation from '../../../components/Navigation.astro';
+import Header from '../../../components/Header.astro';
+import Pankuzu from '../../../components/Breadcrumb.astro';
 import Footer from '../../../components/Footer.astro';
 
 const pageTitle = "小説タイトル";
+
 ---
 <html lang="ja">
 <head>
@@ -20,7 +22,7 @@ const pageTitle = "小説タイトル";
         </script> -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>小説タイトル | txt | スモツ</title>
+  <title>{pageTitle} | txt | スモツ</title>
   <!-- <meta name="description" content=""> -->
   <!-- <meta name="keywords" content=""> -->
   <meta http-equiv="Content-Script-Type" content="text/javascript">
@@ -32,14 +34,7 @@ const pageTitle = "小説タイトル";
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <h1 class="logo">
-        <a href="../../top.html">
-          <img src="../../images/logo.png" width="81" height="100" alt="SUMOTSU" />
-        </a>
-      </h1>
-      <Navigation />
-    </header>
+   <Header />
     <main id="novelList">
       <h2 class="tit_middle">[指輪]</h2>
       <button onclick="nameChangeOpen();" class="nameChangeBlock_btn">名前変換</button>
@@ -95,13 +90,10 @@ const pageTitle = "小説タイトル";
         </li>
       </ul>
     </main>
-    <aside id="pankuzu">
-      <ul class="">
-        <li><a href="../../top.html">top</a></li>
-        <li><a href="../">txt</a></li>
-        <li><span>小説タイトル</span></li>
-      </ul>
-    </aside>
+    <Pankuzu lists={[
+      { name: "txt", path: "txt/" },
+      { name: pageTitle }
+    ]}/>
     <Footer />
   </div>
   <!-- <script src="../../js/common.js"></script>

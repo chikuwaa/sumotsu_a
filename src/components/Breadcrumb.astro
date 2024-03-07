@@ -1,0 +1,24 @@
+---
+const { lists } = Astro.props;
+interface ListItem {
+  path: string;
+  name: string;
+}
+---
+<aside id="pankuzu">
+  <ul class="">
+    <li><a href="/top/">top</a></li>
+    <!-- <li><span>{pageTitle}</span></li> -->
+    {
+      lists.map((list: ListItem, index: number) => (
+     <li>
+       {lists.length - 1 !==index ? (
+         <a href={`/${list.path}`}>{list.name}</a>
+        ) : (
+         <span>{list.name}</span>
+        )}
+     </li>
+      ))
+    }
+  </ul>
+</aside>

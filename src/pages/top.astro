@@ -2,6 +2,7 @@
 import '../styles/reset.css';
 import '../styles/style.css';
 
+import Header from '../components/Header.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 
@@ -34,14 +35,7 @@ const pageTitle = "top";
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <h1 class="logo">
-        <a href="/top/">
-          <img src="./images/logo.png" width="81" height="100" alt="SUMOTSU" />
-        </a>
-      </h1>
-      <Navigation />
-    </header>
+    <Header tit={pageTitle} />
     <main id="index">
       <p class="txt_update">
         <!-- <a href="./novel/3/">0906</a> / txt 短編 +1 --> 240229 / サイト移転<br />

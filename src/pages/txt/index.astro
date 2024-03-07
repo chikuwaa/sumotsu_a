@@ -3,6 +3,7 @@ import '../../styles/reset.css';
 import '../../styles/style.css';
 
 import Navigation from '../../components/Navigation.astro';
+import Pankuzu from '../../components/Breadcrumb.astro';
 import Footer from '../../components/Footer.astro';
 import NovelTitle from '../../components/NovelTitile.astro';
 
@@ -45,12 +46,9 @@ const pageTitle = "txt";
       <NovelTitle tit="拍手ログ" url="./claplog/" desc="下げた拍手置き場"/>
 
     </main>
-    <aside id="pankuzu">
-      <ul class="">
-        <li><a href="../top.html">top</a></li>
-        <li><span>{pageTitle}</span></li>
-      </ul>
-    </aside>
+    <Pankuzu lists={[
+      {name: pageTitle }
+    ]}/>
     <Footer />
   </div>
   <!-- <script src="../js/common.js"></script> -->

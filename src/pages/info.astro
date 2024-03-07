@@ -2,6 +2,7 @@
 import '../styles/reset.css';
 import '../styles/style.css';
 
+import Header from '../components/Header.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 
@@ -35,14 +36,7 @@ const pageTitle = "info";
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <h1 class="logo">
-        <a href="./top.html">
-          <img src="./images/logo.png" width="81" height="100" alt="SUMOTSU" />
-        </a>
-      </h1>
-      <Navigation />
-    </header>
+    <Header tit={pageTitle} />
     <main id="info">
       <h2 class="tit_normal">-about-</h2>
       <p> 二次創作同人サークル「スモツ」の倉庫サイトです。 </p>
@@ -57,7 +51,7 @@ const pageTitle = "info";
       <h3 class="tit_normal">-pass-</h3>
       <p> 裏っぽいものは個別にパスをつけています。<br /> 未成年の方、小説と現実を混同されがちな方は読むのをご遠慮ください。<br /> パスワード→上皇陛下の誕生日 </p>
       <h3 class="tit_normal">-master-</h3>
-      <p> サークル名：スモツ<br> サークル主：げそ[<a href="./message.html">〒</a> / <a href="./re.html">re;</a> / <a href="//www.pixiv.net/member.php?id=675880" target="_blank" rel="me">pixiv</a> / <a href="//chikuwageso-log.tumblr.com/" target="_blank" rel="me">log</a>]<br /><br> げそとお呼びください。大昔に成人済みのへしさに♀沼民。<br /> 絶対にネタ被りが発生するのでpixivつないでおりますが、pixivは絵ばかりです。<br /> なにかありましたら郵便マークからメッセージが送れます。ご利用ください。 </p>
+      <p> サークル名：スモツ<br> サークル主：げそ[<a href="/message/">〒</a> / <a href="./re.html">re;</a> / <a href="//www.pixiv.net/member.php?id=675880" target="_blank" rel="me">pixiv</a> / <a href="//chikuwageso-log.tumblr.com/" target="_blank" rel="me">log</a>]<br /><br> げそとお呼びください。大昔に成人済みのへしさに♀沼民。<br /> 絶対にネタ被りが発生するのでpixivつないでおりますが、pixivは絵ばかりです。<br /> なにかありましたら郵便マークからメッセージが送れます。ご利用ください。 </p>
       <h3 class="tit_normal">-site policy-</h3>
       <p> 個人情報の利用目的やアクセス解析などについては<a href="./policy.html">こちら</a>で記載しています </p>
     </main>
