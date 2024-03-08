@@ -1,49 +1,20 @@
 ---
-import '../../styles/reset.css';
-import '../../styles/style.css';
-
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import SeriesTitle from '../../components/SeriesTitle.astro';
 
 const pageTitle = "txt";
 
 ---
-<html lang="ja">
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{pageTitle} | スモツ</title>
-  <!-- <meta name="description" content=""> -->
-  <!-- <meta name="keywords" content=""> -->
-  <meta http-equiv="Content-Script-Type" content="text/javascript">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <meta name="robots" content="noindex, follow" />
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400|Noto+Serif+JP:300,400,500&subset=japanese" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="../css/reset.css"> -->
-  <!-- <link rel="stylesheet" href="../css/style.css"> -->
-</head>
-<body>
-  <div class="wrap">
-    <Header tit={pageTitle} />
-    <main id="txt">
-      <h2 class="tit_normal">-txt-</h2>
-      <p class="notice boder_dashed"> 名前変換は次のページです。 </p>
+<BaseLayout pageTitle={pageTitle}>
+  <main id="txt">
+    <h2 class="tit_normal">-txt-</h2>
+    <p class="notice boder_dashed"> 名前変換は次のページです。 </p>
 
-      <SeriesTitle tit="長編タイトル" url="./novelName/" desc="長編の説明<br>改行タグが使えます"/>
-      <SeriesTitle tit="中編タイトル" url="./novelName/" desc="中編の説明"/>
-      <SeriesTitle tit="中編タイトル（裏）" url="./ura/" desc="中編の説明。小説目次の前にワンクッションページが入ります" uratarget="novelName"/>
-      <SeriesTitle tit="短編" url="./short/" desc="短編の説明"/>
-      <SeriesTitle tit="拍手ログ" url="./claplog/" desc="下げた拍手置き場"/>
+    <SeriesTitle tit="長編タイトル" url="./novelName/" desc="長編の説明<br>改行タグが使えます"/>
+    <SeriesTitle tit="中編タイトル" url="./novelName/" desc="中編の説明"/>
+    <SeriesTitle tit="中編タイトル（裏）" url="./ura/" desc="中編の説明。小説目次の前にワンクッションページが入ります" uratarget="novelName"/>
+    <SeriesTitle tit="短編" url="./short/" desc="短編の説明"/>
+    <SeriesTitle tit="拍手ログ" url="./claplog/" desc="下げた拍手置き場"/>
 
-    </main>
-    <Footer pankuzuLists={[
-      {name: pageTitle }
-    ]}/>
-  </div>
-  <script>
-    import "../../scripts/common.js";
-  </script>
-</body>
-</html>
+  </main>
+</BaseLayout>

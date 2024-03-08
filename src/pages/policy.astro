@@ -1,59 +1,21 @@
 ---
-import '../styles/reset.css';
-import '../styles/style.css';
-
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "policy";
 ---
-<html lang="ja">
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158818703-1"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-158818703-1');
-        </script> -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>policy | スモツ</title>
-  <!-- <meta name="description" content=""> -->
-  <!-- <meta name="keywords" content=""> -->
-  <meta http-equiv="Content-Script-Type" content="text/javascript">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <meta name="robots" content="noindex, follow" />
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400|Noto+Serif+JP:300,400,500&subset=japanese" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="./css/reset.css"> -->
-  <!-- <link rel="stylesheet" href="./css/style.css"> -->
-</head>
-<body>
-  <div class="wrap">
-    <Header tit={pageTitle} />
-    <main id="info">
-      <h2 class="tit_normal">-site policy-</h2>
-      <h3 class="tit_middle">個人情報の利用目的</h3>
-      <p> お問い合わせの際に名前やメールアドレス等の個人情報を入力いただく場合があります。取得した個人情報は、お問い合わせに対する回答や必要な情報を電子メールなどでご連絡する場合に利用させていただくものであり、これらの目的以外では利用しません。<br><br>
-        <a href="./">インデックスページ</a>や、小説閲覧時のパスワード認証、および夢小説機能ではブラウザにデータを保管しており、当サイトがデータを収集することはございません。
-      </p>
-      <h3 class="tit_middle">アクセス解析について</h3>
-      <p> 当サイトでは訪問者数の確認のため、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しています。<br> このGoogleアナリティクスはトラフィックデータの収集のためにCookieを使用しています。このトラフィックデータは匿名で収集されており、個人を特定するものではありません。 </p>
-      <h4 class="tit_middle">広告について</h4>
-      <p> 当サイトでは広告は表示しておりません。<br> また、ホスティングサービス側でも現時点（2024年2月）広告は配信されていません。<br> 当サイト内で広告が表示されている場合、攻撃者による悪意ある改ざんの可能性が高いため、決してクリックしないでください。<br> また、可能でしたら<a href="./message.html">問い合わせフォーム</a>よりご連絡いただけますと幸いです。 </p>
-      <h3 class="tit_middle">情報の正確性・安全性について</h3>
-      <p> 小説の内容はいずれもフィクションで、必ずしも現実世界と一致するように創作しておりません。また、当サイトの保全には可能な限り気を付けておりますが、個人管理につき追いつかないこともあるかもしれません。<br><br> 当サイトに掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。 </p>
-      <h3 class="tit_middle">著作権について</h3>
-      <p> 刀剣乱舞の二次創作活動については、ニトロプラス社によるガイドラインを確認の上創作し、発表しております。<br> www.nitroplus.co.jp/license/<br> （https:// を追加することでガイドラインページに飛ぶことができます。）<br><br> 当サイトに掲載している文章や画像などについては、転載することを禁止します。<br> 当サイトは著作権の侵害を目的としたものではありません。著作権に関して問題がございましたら、<a href=""></a>お問い合わせフォームよりご連絡ください。迅速に対応いたします。 </p>
-    </main>
-    <Footer pankuzuLists={[
-      {name: pageTitle }
-    ]}/>
-  </div>
-  <script>
-    import "../scripts/common.js";
-  </script>
-</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <main id="info">
+    <h2 class="tit_normal">-site policy-</h2>
+    <h3 class="tit_middle">個人情報の利用目的</h3>
+    <p> お問い合わせの際に名前やメールアドレス等の個人情報を入力いただく場合があります。取得した個人情報は、お問い合わせに対する回答や必要な情報を電子メールなどでご連絡する場合に利用させていただくものであり、これらの目的以外では利用しません。<br><br>
+      <a href="./">インデックスページ</a>や、小説閲覧時のパスワード認証、および夢小説機能ではブラウザにデータを保管しており、当サイトがデータを収集することはございません。
+    </p>
+    <h3 class="tit_middle">アクセス解析について</h3>
+    <p> 当サイトでは訪問者数の確認のため、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しています。<br> このGoogleアナリティクスはトラフィックデータの収集のためにCookieを使用しています。このトラフィックデータは匿名で収集されており、個人を特定するものではありません。 </p>
+    <h4 class="tit_middle">広告について</h4>
+    <p> 当サイトでは広告は表示しておりません。<br> また、ホスティングサービス側でも現時点（2024年2月）広告は配信されていません。<br> 当サイト内で広告が表示されている場合、攻撃者による悪意ある改ざんの可能性が高いため、決してクリックしないでください。<br> また、可能でしたら<a href="./message.html">問い合わせフォーム</a>よりご連絡いただけますと幸いです。 </p>
+    <h3 class="tit_middle">情報の正確性・安全性について</h3>
+    <p> 小説の内容はいずれもフィクションで、必ずしも現実世界と一致するように創作しておりません。また、当サイトの保全には可能な限り気を付けておりますが、個人管理につき追いつかないこともあるかもしれません。<br><br> 当サイトに掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。 </p>
+    <h3 class="tit_middle">著作権について</h3>
+    <p> 刀剣乱舞の二次創作活動については、ニトロプラス社によるガイドラインを確認の上創作し、発表しております。<br> www.nitroplus.co.jp/license/<br> （https:// を追加することでガイドラインページに飛ぶことができます。）<br><br> 当サイトに掲載している文章や画像などについては、転載することを禁止します。<br> 当サイトは著作権の侵害を目的としたものではありません。著作権に関して問題がございましたら、<a href=""></a>お問い合わせフォームよりご連絡ください。迅速に対応いたします。 </p>
+  </main>
+</BaseLayout>

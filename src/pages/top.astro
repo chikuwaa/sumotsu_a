@@ -1,55 +1,17 @@
 ---
-import '../styles/reset.css';
-import '../styles/style.css';
-
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = "top";
 
-
 ---
-<html lang="ja">
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158818703-1"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-158818703-1');
-        </script> -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{pageTitle} | スモツ</title>
-  <!-- <meta name="description" content=""> -->
-  <!-- <meta name="keywords" content=""> -->
-  <meta http-equiv="Content-Script-Type" content="text/javascript">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <meta name="robots" content="noindex, follow" />
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400|Noto+Serif+JP:300,400,500&subset=japanese" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="./css/reset.css"> -->
-  <!-- <link rel="stylesheet" href="./css/style\.css"> -->
-</head>
-<body>
-  <div class="wrap">
-    <Header tit={pageTitle} />
-    <main id="index">
-      <p class="txt_update">
-        <!-- <a href="./novel/3/">0906</a> / txt 短編 +1 --> 240229 / サイト移転<br />
-        <a href="./txt/short/novel1.html">23?0806</a> / txt 短編 +1<br /> (休止継続中ですが1本書けたので上げました)
-      </p>
-      <p class="notice"> 2022/02/23から更新休止中(倉庫化) </p>
-      <h2 class="tit_small">登録サーチ↓</h2>
-      <a href="//dream-search.info/link/rank.php?mode=r_link&id=23850" title="D+S(DREAM SEARCH)" target="_blank">D+S</a>
-    </main>
-    <Footer pankuzuLists={[
-      {name: pageTitle }
-    ]}/>
-  </div>
-  <script>
-    import "../scripts/common.js";
-  </script>
-</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <main id="index">
+    <p class="txt_update">
+      <!-- <a href="./novel/3/">0906</a> / txt 短編 +1 --> 240229 / サイト移転<br />
+      <a href="./txt/short/novel1.html">23?0806</a> / txt 短編 +1<br /> (休止継続中ですが1本書けたので上げました)
+    </p>
+    <p class="notice"> 2022/02/23から更新休止中(倉庫化) </p>
+    <h2 class="tit_small">登録サーチ↓</h2>
+    <a href="//dream-search.info/link/rank.php?mode=r_link&id=23850" title="D+S(DREAM SEARCH)" target="_blank">D+S</a>
+  </main>
+</BaseLayout>

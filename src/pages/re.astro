@@ -1,85 +1,46 @@
 ---
-
-import '../styles/reset.css';
-import '../styles/style.css';
-
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "re";
 ---
-<html lang="ja">
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158818703-1"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-158818703-1');
-        </script> -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>re | スモツ</title>
-  <!-- <meta name="description" content=""> -->
-  <!-- <meta name="keywords" content=""> -->
-  <meta http-equiv="Content-Script-Type" content="text/javascript">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <meta name="robots" content="noindex, follow" />
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400|Noto+Serif+JP:300,400,500&subset=japanese" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/style.css"> -->
-</head>
-<body>
-  <div class="wrap">
-    <Header tit={pageTitle} />
-    <main id="re">
-      <h2 class="tit_normal">-re-</h2>
-      <article class="replay">
-        <h3 class="tit">
-          <span class="date">YYYY.MM.DD 受信</span> 匿名 さま
-        </h3>
-        <p class="honbun"> テキストデータです </p>
-      </article>
-      <article class="replay">
-        <h3 class="tit">
-          <span class="date">YYYY.MM.DD 受信</span> 匿名 さま
-        </h3>
-        <p class="honbun"> テキストデータです </p>
-      </article>
-      <article class="replay">
-        <h3 class="tit">
-          <span class="date">YYYY.MM.DD 受信</span> 匿名 さま
-        </h3>
-        <p class="honbun"> テキストデータです </p>
-      </article>
-      <div class="pagenation">
-        <ul>
-          <li class="prev">
-            <a href="#">&lt;</a>
-          </li>
-          <li class="cur">
-            <a href="#">1</a>
-          </li>
-          <li>
-            <a href="#">2</a>
-          </li>
-          <li>
-            <a href="#">3</a>
-          </li>
-          <li class="next">
-            <a href="#">&gt;</a>
-          </li>
-        </ul>
-      </div>
-    </main>
-    <Footer pankuzuLists={[
-      {name: pageTitle }
-    ]}/>
-  </div>
-  <script>
-    import "../scripts/common.js";
-  </script>
-</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <main id="re">
+    <h2 class="tit_normal">-re-</h2>
+    <article class="replay">
+      <h3 class="tit">
+        <span class="date">YYYY.MM.DD 受信</span> 匿名 さま
+      </h3>
+      <p class="honbun"> テキストデータです </p>
+    </article>
+    <article class="replay">
+      <h3 class="tit">
+        <span class="date">YYYY.MM.DD 受信</span> 匿名 さま
+      </h3>
+      <p class="honbun"> テキストデータです </p>
+    </article>
+    <article class="replay">
+      <h3 class="tit">
+        <span class="date">YYYY.MM.DD 受信</span> 匿名 さま
+      </h3>
+      <p class="honbun"> テキストデータです </p>
+    </article>
+    <div class="pagenation">
+      <ul>
+        <li class="prev">
+          <a href="#">&lt;</a>
+        </li>
+        <li class="cur">
+          <a href="#">1</a>
+        </li>
+        <li>
+          <a href="#">2</a>
+        </li>
+        <li>
+          <a href="#">3</a>
+        </li>
+        <li class="next">
+          <a href="#">&gt;</a>
+        </li>
+      </ul>
+    </div>
+  </main>
+</BaseLayout>
