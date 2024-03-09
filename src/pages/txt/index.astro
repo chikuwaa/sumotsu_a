@@ -3,9 +3,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import SeriesTitle from '../../components/SeriesTitle.astro';
 
 const pageTitle = "txt";
+const pankuzuLists =[
+  {name: pageTitle }
+]
 
 ---
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} pankuzu ={pankuzuLists}>
   <main id="txt">
     <h2 class="tit_normal">-txt-</h2>
     <p class="notice boder_dashed"> 名前変換は次のページです。 </p>

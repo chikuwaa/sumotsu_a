@@ -345,11 +345,6 @@ main {
 
 /*
 個別ページ--------------------*/
-#message {
-  /*デザインcss↓
-  https://www.legit.co.jp/contact_css/17931 */
-  /*プライバシーのデザインcss↓*/
-}
 #message .box_con03 form {
   width: 100%;
 }
@@ -610,7 +605,7 @@ main {
 #novelPage .novel {
   margin-bottom: 3em;
 }
-#novelPage .tit_novel {
+#novelPage h2 {
   font-size: 1.1em;
   padding-bottom: 1em;
   border-bottom: solid 1px #ccc;

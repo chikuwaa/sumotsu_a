@@ -1,5 +1,7 @@
 ---
+layout: ../../../layouts/MarkdownPostLayout.astro
 title: 'サンプル'
+series: '小説タイトル'
 pubDate: 2024-03-03
 description: 'サンプルファイル'
 author: 'げそ'

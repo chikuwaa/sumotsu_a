@@ -1,79 +1,24 @@
 ---
-import '../../../styles/reset.css';
-import '../../../styles/style.css';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
 
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
 import NovelTitle from '../../../components/NovelTitle.astro';
+import NameChange from '../../../components/NameChange.astro';
 
 const pageTitle = "小説タイトル";
+const pankuzuLists =[
+  {name: "txt" ,path:"txt/"},
+  {name: pageTitle }
+]
 
 ---
-<html lang="ja">
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158818703-1"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-158818703-1');
-        </script> -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{pageTitle} | txt | スモツ</title>
-  <!-- <meta name="description" content=""> -->
-  <!-- <meta name="keywords" content=""> -->
-  <meta http-equiv="Content-Script-Type" content="text/javascript">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <meta name="robots" content="noindex, follow" />
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400|Noto+Serif+JP:300,400,500&subset=japanese" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="../../css/reset.css">
-  <link rel="stylesheet" href="../../css/style.css"> -->
-</head>
-<body>
-  <div class="wrap">
-    <Header tit={pageTitle} />
-    <main id="novelList">
-      <h2 class="tit_middle">[長編タイトル]</h2>
-      <button id="nameChangeOpen" class="nameChangeBlock_btn">名前変換</button>
-      <div id="nameChangeBlock" class="">
-        <div class="nameChangeBlock_in boder_dashed">
-          <p> 登録名：<span class="charmname1">高橋</span><span class="charmname3">真木</span><br> 長谷部は「長谷部国重」です。 </p>
-          <!-- 名前入力フォーム -->
-          <p class="input_name"> 苗字 <input type="text" id="charmname1" class="charm" value="高橋">
-          </p>
-          <p class="input_name"> 名前 <input type="text" id="charmname3" class="charm" value="真木">
-          </p>
-          <div class="nameBtn">
-            <div class="box_wrap">
-              <input type="checkbox" id="record_check" name="record_check" value="登録を保存する">
-              <label for="record_check" class="checkbox01"> 登録を保存する </label>
-            </div>
-            <!-- 登録ボタンと削除ボタン -->
-            <button type="button" id="charmset" style="display: none;">登録</button>
-            <button type="button" id="charmsession">登録</button>
-            <button type="button" id="charmunset">削除</button>
-          </div>
-          <p class="tit_small"> 「登録を保存する」とブラウザを閉じても名前が登録されたままになります </p>
-        </div>
-      </div>
-      <ul class="novelLinkList">
-        <NovelTitle tit="1. サンプル" url="./novel1/"/>
-        <NovelTitle tit="2. 裏サンプル" url="../ura/" uratarget="novel1" />
-        <NovelTitle tit="サンプル" url="./novel1/" desc="番外編。説明が追加できます" />
-      </ul>
-    </main>
-    <Footer pankuzuLists={[
-      { name: "txt", path: "txt/" },
-      { name: pageTitle }
-    ]}/>
-  </div>
-  <script>
-    import "../../../scripts/common.js";
-    import "../../../scripts/lib/charm.js";
-    import "../../../scripts/novel.js";
-  </script>
-</body>
-</html>
+<BaseLayout pageTitle={pageTitle} pankuzu ={pankuzuLists}>
+  <main id="novelList">
+    <h2 class="tit_middle">[長編タイトル]</h2>
+    <NameChange defaultFamName="高橋" defaultName="真木" classFamName="charmname1" className="charmname3" />
+    <ul class="novelLinkList">
+      <NovelTitle tit="1. サンプル" url="./novel1/"/>
+      <NovelTitle tit="2. 裏サンプル" url="../ura/" uratarget="novel1" />
+      <NovelTitle tit="サンプル" url="./novel1/" desc="番外編。説明が追加できます" />
+    </ul>
+  </main>
+</BaseLayout>

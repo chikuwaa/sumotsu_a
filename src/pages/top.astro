@@ -2,9 +2,11 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = "top";
-
+const pankuzuLists =[
+  {name: pageTitle }
+]
 ---
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} pankuzu ={pankuzuLists}>
   <main id="index">
     <p class="txt_update">
       <!-- <a href="./novel/3/">0906</a> / txt 短編 +1 --> 240229 / サイト移転<br />
