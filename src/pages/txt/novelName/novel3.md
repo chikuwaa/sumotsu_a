@@ -1,12 +1,12 @@
 ---
 layout: ../../../layouts/MarkdownPostLayout.astro
-title: '1. サンプル'
+title: 'サンプル'
 series: '小説タイトル'
 pubDate: 2024-03-03
-description: ''
+description: '番外編。説明が追加できます'
 author: 'げそ'
 ura: false
-tags: ["サンプル", "novelName", "1話"]
+tags: ["サンプル", "novelName", "番外編"]
 ---
 ## サンプル
 <span class="charmname1">高橋</span><span class="charmname3">真木</span>はその夜も窓の外で月に祈っていた。彼と再会してから何年経とうと、祈りは彼女にとって欠かせない日課となっている。

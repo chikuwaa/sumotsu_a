@@ -1,8 +1,8 @@
 ---
-const { tit, url , desc , uratarget } = Astro.props;
+const { tit, url , desc , ura } = Astro.props;
 ---
 <li class="js-novelLink">
-  <a href={url} id={uratarget}>{tit}</a>
+  {ura ? <a href="../ura/" id={ url.split('/').pop() }>{tit}</a> : <a href={url} >{tit}</a>}
   <p class="naiyou_memo" set:html={desc}></p>
 </li>
 

@@ -1,0 +1,9 @@
+---
+const {date , to , desc , url} = Astro.props;
+---
+<article class="replay">
+  <h3 class="tit">
+    <span class="date">{date} 受信</span> {to} さま
+  </h3>
+  <p class="honbun">{desc}<a class="btn" href={url}>返信を見る</a></p>
+</article>

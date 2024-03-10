@@ -1,0 +1,17 @@
+---
+import BaseLayout from './BaseLayout.astro';
+const { frontmatter } = Astro.props;
+const pankuzuLists =[
+  {name: "re" ,path:"re/"},
+  {name: frontmatter.title }
+]
+---
+<BaseLayout pageTitle={frontmatter.title} pankuzu ={pankuzuLists}>
+  <main id="re">
+    <article class="replay">
+      <h2 class="tit"><span class="date">{frontmatter.receveDate.slice(0,10)} 受信</span> {frontmatter.to} さま</h2>
+      <h3 class="tit02">{frontmatter.desc}</h3>
+      <slot />
+    </article>
+  </main>
+</BaseLayout>

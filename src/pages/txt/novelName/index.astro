@@ -10,15 +10,15 @@ const pankuzuLists =[
   {name: pageTitle }
 ]
 
+const allPosts = await Astro.glob('./*.md');
+
 ---
 <BaseLayout pageTitle={pageTitle} pankuzu ={pankuzuLists}>
   <main id="novelList">
-    <h2 class="tit_middle">[長編タイトル]</h2>
+    <h2 class="tit_middle">[{pageTitle}]</h2>
     <NameChange defaultFamName="高橋" defaultName="真木" classFamName="charmname1" className="charmname3" />
     <ul class="novelLinkList">
-      <NovelTitle tit="1. サンプル" url="./novel1/"/>
-      <NovelTitle tit="2. 裏サンプル" url="../ura/" uratarget="novel1" />
-      <NovelTitle tit="サンプル" url="./novel1/" desc="番外編。説明が追加できます" />
+      {allPosts.map((post) => <NovelTitle tit={post.frontmatter.title} url={post.url} desc={post.frontmatter.description} ura={post.frontmatter.ura}/>)}
     </ul>
   </main>
 </BaseLayout>
