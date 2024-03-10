@@ -45,6 +45,9 @@ index ... インデックスページ パスワードによるログインを設
 
 ## 利用したライブラリ・参考にしたサイト
 
+Astro
+[https://docs.astro.build/ja/tutorial/0-introduction/]
+
 名前変換機能（ライセンスあり）
 [Charm.js](https://lanama.net/scripts/charm/)
 
