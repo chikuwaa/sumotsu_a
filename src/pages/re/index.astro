@@ -18,7 +18,7 @@ const sortedPosts = allPosts.sort((a, b) => {
 <BaseLayout pageTitle={pageTitle} pankuzu ={pankuzuLists}>
   <main id="re">
     <h2 class="tit_normal">-re-</h2>
-    {allPosts.map((post) => <ReplayPost date={post.frontmatter.receveDate.slice(0,10)} to={post.frontmatter.to} desc={post.frontmatter.desc} url={post.url} />)}
+    {sortedPosts.map((post) => <ReplayPost date={post.frontmatter.receveDate.slice(0,10)} to={post.frontmatter.to} desc={post.frontmatter.desc} url={post.url} />)}
     <div class="pagenation">
       <ul>
         <li class="prev">
