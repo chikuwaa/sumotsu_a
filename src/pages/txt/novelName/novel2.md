@@ -1,8 +1,8 @@
 ---
-layout: ../../../layouts/MarkdownPostLayout.astro
+slug: novelName2
 title: '2. 裏サンプル'
 series: '小説タイトル'
-pubDate: 2024-03-03
+pubDate: 2024-03-04
 description: ''
 author: 'げそ'
 ura: ture

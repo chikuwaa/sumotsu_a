@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { sortByDate } from '../../../utils/sortByDate.js'
+import Novelinfo from '../../../components/NovelInfo.astro';
+
+export async function getStaticPaths() {
+  const allPosts = await Astro.glob("./*.md")
+  const numberOfPosts = allPosts.length // すべての記事の合計数
+
+  return allPosts.sort(sortByDate).map((post, i) => ({ // 並び替えてから展開
+    params: {
+      slug: post.frontmatter.slug,
+    },
+    props: {
+      thisPost : post,
+      prevPost: // 1つ前の記事
+        i + 1 === numberOfPosts // 現在の投稿が最古の記事の場合
+          ? { frontmatter: ""}
+          : allPosts[i + 1],
+      nextPost: // 1つの記事
+        i === 0 // 現在の投稿が最新の記事の場合
+          ? { frontmatter: "" }
+          : allPosts[i - 1],
+    },
+  }))
+}
+const { thisPost , prevPost,  nextPost } = Astro.props // テンプレート内で使えるデータとして前後の記事を取得
+const pankuzuLists =[
+  {name: "txt" ,path:"txt/"},
+  {name: thisPost.frontmatter.series , path:"txt/novelName/"},
+  {name: thisPost.frontmatter.title }
+]
+---
+<BaseLayout pageTitle={thisPost.frontmatter.title} pankuzu ={pankuzuLists}>
+  <main id="novelPage">
+  <article class="novel" set:html={thisPost.compiledContent()}>
+  </article>
+  <Novelinfo {prevPost} {nextPost} />
+</main>
+</BaseLayout>
+<script>
+  import "../../../scripts/lib/charm.js";
+</script>

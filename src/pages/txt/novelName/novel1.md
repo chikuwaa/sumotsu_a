@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/MarkdownPostLayout.astro
+slug: novelName1
 title: '1. サンプル'
 series: '小説タイトル'
 pubDate: 2024-03-03

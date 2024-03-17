@@ -1,8 +1,8 @@
 ---
-layout: ../../../layouts/MarkdownPostLayout.astro
+slug: bangai
 title: 'サンプル'
 series: '小説タイトル'
-pubDate: 2024-03-03
+pubDate: 2024-03-05
 description: '番外編。説明が追加できます'
 author: 'げそ'
 ura: false
