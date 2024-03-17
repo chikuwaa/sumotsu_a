@@ -1,0 +1,43 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Novelinfo from '../components/NovelInfo.astro';
+
+const { frontmatter } = Astro.props;
+const pageTitle = frontmatter.title;
+const pankuzuLists =[
+  {name: "txt" ,path:"txt/"},
+  {name: frontmatter.series , path:"txt/novelName/"},
+  {name: frontmatter.title }
+]
+
+const allPosts = await Astro.glob("../pages/txt/novelName/*.md");
+let nextPage , prevPage;
+allPosts.map(function(post, i){
+  if(post.url === frontmatter.url){
+    if(i + 1 === allPosts.length){
+      // 現在の投稿が最新の小説の場合
+      nextPage = "";
+    }else{
+      nextPage = allPosts[i + 1]
+    }
+    if(i === 0){
+      // 現在の投稿が1話目の場合
+      prevPage = "";
+    }else{
+      prevPage = allPosts[i - 1]
+    }
+  }
+})
+
+---
+<BaseLayout pageTitle={pageTitle} pankuzu ={pankuzuLists}>
+  <main id="novelPage">
+    <article class="novel">
+      <slot />
+    </article>
+    <Novelinfo {prevPage} {nextPage} />
+  </main>
+</BaseLayout>
+<script>
+  import "../scripts/lib/charm.js";
+</script>

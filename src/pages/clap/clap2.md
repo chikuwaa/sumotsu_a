@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
+layout: ../../layouts/ClapLayout.astro
 title: 'clap'
 series: '拍手'
 pubDate: 2024-03-03
