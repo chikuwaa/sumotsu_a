@@ -1,4 +1,5 @@
 ---
+layout: ../../../layouts/NovelLayout.astro
 slug: novelName1
 title: '1. サンプル'
 series: '小説タイトル'

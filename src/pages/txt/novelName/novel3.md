@@ -1,4 +1,5 @@
 ---
+layout: ../../../layouts/NovelLayout.astro
 slug: bangai
 title: 'サンプル'
 series: '小説タイトル'
