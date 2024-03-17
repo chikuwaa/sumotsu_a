@@ -74,6 +74,9 @@ Web拍手
 最新記事順に並べ替え
 [https://evoworx.dev/blog/astro-sorted-posts/]
 
+ページネーション
+https://route360.dev/ja/post/astro-prevnext-posts/
+
 ## 動作環境
 
 * html5
