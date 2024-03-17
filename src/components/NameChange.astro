@@ -1,0 +1,30 @@
+---
+const { defaultFamName, defaultName , classFamName , className } = Astro.props;
+---
+<button id="nameChangeOpen" class="nameChangeBlock_btn">名前変換</button>
+<div id="nameChangeBlock" class="">
+  <div class="nameChangeBlock_in boder_dashed">
+    <p> 登録名：<span class={classFamName}>{defaultFamName}</span><span class={className}>{defaultName}</span><br> 長谷部は「長谷部国重」です。 </p>
+    <!-- 名前入力フォーム -->
+    <p class="input_name"> 苗字 <input type="text" id={classFamName} class="charm" value={defaultFamName}>
+    </p>
+    <p class="input_name"> 名前 <input type="text" id={className} class="charm" value={defaultName}>
+    </p>
+    <div class="nameBtn">
+      <div class="box_wrap">
+        <input type="checkbox" id="record_check" name="record_check" value="登録を保存する">
+        <label for="record_check" class="checkbox01"> 登録を保存する </label>
+      </div>
+      <!-- 登録ボタンと削除ボタン -->
+      <button type="button" id="charmset" style="display: none;">登録</button>
+      <button type="button" id="charmsession">登録</button>
+      <button type="button" id="charmunset">削除</button>
+    </div>
+    <p class="tit_small"> 「登録を保存する」とブラウザを閉じても名前が登録されたままになります </p>
+  </div>
+</div>
+
+<script>
+  import "../scripts/lib/charm.js";
+  import "../scripts/novel.js";
+</script>

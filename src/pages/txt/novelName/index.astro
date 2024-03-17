@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+import NovelTitle from '../../../components/NovelTitle.astro';
+import NameChange from '../../../components/NameChange.astro';
+
+const pageTitle = "小説タイトル";
+const pankuzuLists =[
+  {name: "txt" ,path:"txt/"},
+  {name: pageTitle }
+]
+
+const allPosts = await Astro.glob('./*.md');
+
+---
+<BaseLayout pageTitle={pageTitle} pankuzu ={pankuzuLists}>
+  <main id="novelList">
+    <h2 class="tit_middle">[{pageTitle}]</h2>
+    <NameChange defaultFamName="高橋" defaultName="真木" classFamName="charmname1" className="charmname3" />
+    <ul class="novelLinkList">
+      {allPosts.map((post) => <NovelTitle tit={post.frontmatter.title} url={post.frontmatter.slug} desc={post.frontmatter.description} ura={post.frontmatter.ura}/>)}
+    </ul>
+  </main>
+</BaseLayout>

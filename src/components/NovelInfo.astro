@@ -1,0 +1,31 @@
+---
+const { prevPost, nextPost } = Astro.props;
+---
+<div class="novelInfo">
+  <ul class="nav">
+    <!-- 前の記事（ある場合にのみ表示） -->
+    {prevPost.frontmatter &&
+    <li class="prev">
+      {prevPost.frontmatter.ura
+        ? <a href="../ura/" id={prevPost.frontmatter.slug}>&lt; prev</a>
+        : <a href={`./${prevPost.frontmatter.slug}`}>&lt; prev</a>
+      }
+    </li>
+    }
+    <li>
+      <a href="./">一覧に戻る</a>
+    </li>
+    <!--  次の記事（ある場合にのみ表示） -->
+    {nextPost.frontmatter &&
+    <li class="next">
+      {nextPost.frontmatter.ura
+        ? <a href="../ura/" id={nextPost.frontmatter.slug}>next &gt;</a>
+        : <a href={`./${nextPost.frontmatter.slug}`}>next &gt;</a>
+      }
+    </li>
+    }
+  </ul>
+</div>
+<script>
+  import "../scripts/recordurl.js";
+</script>

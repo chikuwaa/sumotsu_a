@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = "top";
+const pankuzuLists =[
+  {name: pageTitle }
+]
+---
+<BaseLayout pageTitle={pageTitle} pankuzu ={pankuzuLists}>
+  <main id="index">
+    <p class="txt_update">
+      <!-- <a href="./novel/3/">0906</a> / txt 短編 +1 --> 240229 / サイト移転<br />
+      <a href="./txt/short/novel1.html">23?0806</a> / txt 短編 +1<br /> (休止継続中ですが1本書けたので上げました)
+    </p>
+    <p class="notice"> 2022/02/23から更新休止中(倉庫化) </p>
+    <h2 class="tit_small">登録サーチ↓</h2>
+    <a href="//dream-search.info/link/rank.php?mode=r_link&id=23850" title="D+S(DREAM SEARCH)" target="_blank">D+S</a>
+  </main>
+</BaseLayout>

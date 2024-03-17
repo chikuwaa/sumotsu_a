@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+import ReplayPost from '../../components/ReplayPost.astro';
+
+const pageTitle = "re";
+const pankuzuLists =[
+  {name: pageTitle }
+]
+
+import type { GetStaticPathsOptions } from 'astro';
+export async function getStaticPaths({ paginate }:GetStaticPathsOptions) {
+  const allPosts = await Astro.glob('./*.md');
+  const sortedPosts = allPosts.sort((a, b) => {
+    const aDate = new Date(a.frontmatter.receveDate);
+    const bDate = new Date(b.frontmatter.receveDate);
+    return bDate.getTime() - aDate.getTime();
+  });
+  return paginate(sortedPosts, { pageSize: 5 });
+}
+// ページネーションされたデータは、すべて"page"プロパティとして渡されます
+const { page } = Astro.props;
+---
+<BaseLayout pageTitle={pageTitle} pankuzu ={pankuzuLists}>
+  <main id="re">
+    <h2 class="tit_normal">-re-</h2>
+    {page.data.map((post) => <ReplayPost date={post.frontmatter.receveDate.slice(0,10)} to={post.frontmatter.to} desc={post.frontmatter.desc} url={post.url} />)}
+    <div class="pagenation">
+      <ul>
+        {page.url.prev && <li class="prev"><a href={page.url.prev}>&lt;</a> </li>}
+        <li>
+          {page.currentPage}/{page.lastPage}
+        </li>
+        {page.url.next && <li class="next"><a href={page.url.next}>&gt;</a> </li>}
+      </ul>
+    </div>
+  </main>
+</BaseLayout>

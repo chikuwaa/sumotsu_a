@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+import UraCertification from '../../components/UraCertification.astro';
+
+const pageTitle = "認証";
+const pankuzuLists =[
+  {name: pageTitle }
+]
+
+---
+<BaseLayout pageTitle={pageTitle} pankuzu ={pankuzuLists}>
+  <main id="ura">
+    <UraCertification />
+  </main>
+</BaseLayout>

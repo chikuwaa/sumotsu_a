@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import MsgForm from '../components/MsgForm.astro';
+
+const pageTitle = "message";
+const pankuzuLists =[
+  {name: pageTitle }
+]
+---
+<BaseLayout pageTitle={pageTitle} pankuzu ={pankuzuLists}>
+  <main id="message">
+    <h2 class="tit_normal">-message-</h2>
+    <div class="box_con03">
+  <MsgForm />
+    </div>
+  </main>
+</BaseLayout>
