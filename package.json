@@ -1,5 +1,8 @@
 {
   "name": "sumotsu-a",
+  "description": "astro template for name change novels",
+  "author": "geso (https://github.com/chikuwaa)",
+  "homepage": "https://github.com/chikuwaa/sumotsu_a",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
