@@ -1,8 +1,31 @@
 ---
-const { tit, url , desc , ura } = Astro.props;
+//  渡された引数をもとに小説タイトルのリスト（li）要素を表示するコンポーネント
+//  * tit : 渡された小説タイトル
+//  * url : 渡された小説ページのURL
+//  * desc : 渡された小説の説明文(htmlタグが入っていることもある)
+//  * ura : 渡された小説の裏フラグ
+//  * date : 渡された小説の公開日(渡されなかった場合は空)
+
+const { tit, url , desc , ura , date = ""} = Astro.props;
+let pub;
+let endDate = new Date(); // newマークを付けるエンド（pushした日）
+let startDate; // newマークを付けるスタート
+startDate = new Date();
+startDate.setMonth(startDate.getMonth() - 1); // pushした日の1カ月前
+
+if(date){ // 公開日が渡されていたら
+  // 日付形式に変換してpubに格納
+  pub = new Date(date);
+
+}else{  // 渡されていなかったら
+  // 一カ月前の日付をpubに格納
+  pub = startDate;
+}
+
 ---
-<li class="js-novelLink">
+<li class="js-novelLink" >
   {ura ? <a href="../ura/" id={ url.split('/').pop() }>{tit}</a> : <a href={url} >{tit}</a>}
+  {startDate < pub && pub <= endDate && <span class="new">new</span>}
   <p class="naiyou_memo" set:html={desc}></p>
 </li>
 

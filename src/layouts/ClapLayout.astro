@@ -6,29 +6,30 @@ const pankuzuLists =[
   {name: pageTitle }
 ]
 
-const allPosts = await Astro.glob("../pages/clap/*.md");
-let nextPage;
-allPosts.map(function(post, i){
-  const { frontmatter } = Astro.props;
-  if(post.url === frontmatter.url){
-      if(i + 1 === allPosts.length){
-        // 現在の投稿が最後の拍手の場合
-        nextPage =  allPosts[0]
-      }else{
-        nextPage = allPosts[i + 1]
-      }
-  }
-})
+// Netlify formsでお礼の切り替えができないため一旦削除
+// const allPosts = await Astro.glob("../pages/clap/*.md");
+// let nextPage;
+// allPosts.map(function(post, i){
+//   const { frontmatter } = Astro.props;
+//   if(post.url === frontmatter.url){
+//       if(i + 1 === allPosts.length){
+//         // 現在の投稿が最後の拍手の場合
+//         nextPage =  allPosts[0]
+//       }else{
+//         nextPage = allPosts[i + 1]
+//       }
+//   }
+// })
 
 ---
 <BaseLayout pageTitle={pageTitle} pankuzu ={pankuzuLists}>
   <main id="clap">
-    <p class="naiyou_memo"> ※拍手ありがとうございました！※<br> ※お礼は現在{allPosts.length}種類です※ </p>
+    <p class="naiyou_memo"> ※拍手ありがとうございました！</p>
     <slot />
 
     <div class="clap_repeat boder_dashed">
       <p class="mb1em">メッセージなしでも送れます。</p>
-      <form name="clap" method="post" action={nextPage.url} data-netlify="true" data-netlify-honeypot="bot-field">
+      <form name="clap" method="post" action="/clap/clap1/" data-netlify="true" data-netlify-honeypot="bot-field">
         <div style="display: none;">
           <input name="bot-field" />
         </div>

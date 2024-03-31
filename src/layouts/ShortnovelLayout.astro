@@ -1,5 +1,5 @@
 ---
-// ファイル名順に並ぶタイプのレイアウト
+// 新しい順に並ぶタイプのレイアウト
 import BaseLayout from './BaseLayout.astro';
 import Novelinfo from '../components/NovelInfo.astro';
 
@@ -7,25 +7,30 @@ const { frontmatter } = Astro.props;
 const pageTitle = frontmatter.title;
 const pankuzuLists =[
   {name: "txt" ,path:"txt/"},
-  {name: frontmatter.series , path:"txt/novelName/"},
+  {name: frontmatter.series , path:"txt/short/"},
   {name: frontmatter.title }
 ]
 
-const allPosts = await Astro.glob("../pages/txt/novelName/*.md");
+const allPosts = await Astro.glob("../pages/txt/short/*.md");
+const sortedPosts = allPosts.sort((a, b) => {
+  const aDate = new Date(a.frontmatter.pubDate);
+  const bDate = new Date(b.frontmatter.pubDate);
+  return bDate.getTime() - aDate.getTime();
+});
 let nextPage , prevPage;
-allPosts.map(function(post, i){
+sortedPosts.map(function(post, i){
   if(post.url === frontmatter.url){
-    if(i + 1 === allPosts.length){
+    if(i + 1 === sortedPosts.length){
       // 現在の投稿が最新の小説の場合
       nextPage = "";
     }else{
-      nextPage = allPosts[i + 1]
+      nextPage = sortedPosts[i + 1]
     }
     if(i === 0){
       // 現在の投稿が1話目の場合
       prevPage = "";
     }else{
-      prevPage = allPosts[i - 1]
+      prevPage = sortedPosts[i - 1]
     }
   }
 })

@@ -1,4 +1,9 @@
 ---
+//  渡された引数をもとに小説シリーズ要素を表示するコンポーネント
+//  * tit : 渡された小説シリーズタイトル
+//  * url : 渡された小小説シリーズのURL
+//  * desc : 渡された小説シリーズの説明
+//  * uratarget : 渡された小説シリーズが裏だった時の本当のURL
 const { tit, url , desc , uratarget } = Astro.props;
 ---
 <h3 class="tit_middle js-novelLink"> [<a href={url} id={uratarget}>{tit}</a>]</h3>

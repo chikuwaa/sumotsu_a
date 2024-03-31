@@ -1,4 +1,6 @@
-// console.log("ura.js");
+/**
+ * 裏ページでのパスワード認証
+ */
 document.querySelector('#passCheck').addEventListener('click', () => {
   passCheck();
 });
@@ -14,8 +16,7 @@ function loginFunc(p) {
   const targetUrl = sessionStorage.getItem('sumotsu_url');
   console.log(targetUrl);
   sha256(p).then(function(hash){
-    if(hash == "fa3cfb3f1bb823aa9501f88f1f95f732ee6fef2c3a48be7f1d38037b216a549f"){
-      // sessionStorage.setItem('sumotsu_ura', true );
+    if(hash == "2ac9a6746aca543af8dff39894cfe8173afba21eb01c6fae33d52947222855ef"){
       searchResult.textContent = '認証しました';
       //ターゲットへ遷移
       setTimeout(function(){

@@ -1,10 +1,16 @@
 ---
+//  渡された引数をもとに名前変換フォーム要素を表示するコンポーネント
+//  * defaultFamName : 渡されたデフォルトの名前（苗字）
+//  * defaultName : 渡されたデフォルトの名前（名前）
+//  * classFamName : 渡された変換用のクラス名(苗字) ... charm.jsにて利用されます
+//  * className : 渡された変換用のクラス名(名前) ... charm.jsにて利用されます
+
 const { defaultFamName, defaultName , classFamName , className } = Astro.props;
 ---
-<button id="nameChangeOpen" class="nameChangeBlock_btn">名前変換</button>
+<button id="nameChangeOpen" class="nameChangeBlock_btn">名前変換はこちら</button>
 <div id="nameChangeBlock" class="">
   <div class="nameChangeBlock_in boder_dashed">
-    <p> 登録名：<span class={classFamName}>{defaultFamName}</span><span class={className}>{defaultName}</span><br> 長谷部は「長谷部国重」です。 </p>
+    <p> 登録名：<span class={classFamName}>{defaultFamName}</span><span class={className}>{defaultName}</span></p>
     <!-- 名前入力フォーム -->
     <p class="input_name"> 苗字 <input type="text" id={classFamName} class="charm" value={defaultFamName}>
     </p>
