@@ -1,3 +1,6 @@
+/**
+ * 裏ページのリンク元に設置する
+ */
 function recordUrl(u){
   // パスワード認証した後に遷移するURLを記録
   sessionStorage.setItem('sumotsu_url', u );

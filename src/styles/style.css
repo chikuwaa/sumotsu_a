@@ -188,6 +188,11 @@ main {
           box-sizing: border-box;
   padding: 50px 0px;
 }
+main hr {
+  width: 10em;
+  border: dashed 1px #ccc;
+  margin: 2em auto;
+}
 
 .tit_small {
   font-size: 1rem;
@@ -615,6 +620,10 @@ main {
 #novelPage {
   padding-bottom: 2em;
 }
+#novelPage ruby > rt{
+  font-size: 0.8em;
+}
+
 #novelPage .novel {
   margin-bottom: 3em;
 }
@@ -623,6 +632,11 @@ main {
   padding-bottom: 1em;
   border-bottom: solid 1px #ccc;
   margin-bottom: 2em;
+}
+#novelPage h3 {
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  font-weight: bold;
 }
 #novelPage .novelInfo .nav {
   display: -webkit-box;

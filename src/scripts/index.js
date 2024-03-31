@@ -1,22 +1,29 @@
-// console.log("index.js");
+/**
+ * ログインページ
+ */
 document.querySelector('#enterPage').addEventListener('click', () => {
   enterPage();
 });
+/**
+ * enterボタンを押したときに実行
+ */
 function enterPage(){
   const inputPassword = document.querySelector('#pass').value;
   loginFunc(inputPassword);
 }
-
+/**
+ * パスワード認証
+ */
 function loginFunc(p) {
   const searchResult = document.querySelector('#search-result');
 
   sha256(p).then(function(hash){
-    if(hash == "85daaf6f7055cd5736287faed9603d712920092c4f8fd0097ec3b650bf27530e"){
+    if(hash == "2ac9a6746aca543af8dff39894cfe8173afba21eb01c6fae33d52947222855ef"){
       sessionStorage.setItem('sumotsu_login', true );
       searchResult.textContent = 'ログインしました';
       //トップ画面へ遷移
       setTimeout(function(){
-        window.location.href = './top.html';
+        window.location.href = './top/';
       },500);
     }else{
       searchResult.textContent = 'パスワードが違います';
