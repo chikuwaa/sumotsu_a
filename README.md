@@ -98,8 +98,8 @@ ura.js内で修正してください。
 ## 作った人
 
 * 作成者 [げそ](https://github.com/chikuwaa)
-* Web https://chikuwaa.github.io/
-<!-- * OFUSE -->
+* Web https://www.geso.work/
+<a data-ofuse-widget-button href="https://ofuse.me/o?uid=72461" data-ofuse-id="72461">OFUSEで応援を送る</a><script async src="https://ofuse.me/assets/platform/widget.js" charset="utf-8"></script>
 
 ## ライセンス
 
