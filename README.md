@@ -3,7 +3,7 @@
 Astroを利用した夢小説用のサイトテンプレートです。
 ホームページサービス [ナノ](https://nanos.jp/) で配布されていたテンプレートをもとにカスタマイズして作成しています。
 
-[作者のサイト](html://sumotsu.geso.work) で使用しています。同様のサイトを作りたい方向けに、ソースの参考になればと思い公開しました。
+[作者のサイト](https://sumotsu.geso.work) で使用しています。同様のサイトを作りたい方向けに、ソースの参考になればと思い公開しました。
 
 ## 機能
 
@@ -98,8 +98,8 @@ ura.js内で修正してください。
 ## 作った人
 
 * 作成者 [げそ](https://github.com/chikuwaa)
-* Web https://chikuwaa.github.io/
-<!-- * OFUSE -->
+* Web https://www.geso.work/
+* OFUSE https://ofuse.me/08125c0c
 
 ## ライセンス
 
