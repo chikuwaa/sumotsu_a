@@ -2,6 +2,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.geso.work',
-  base: '/sumotsu_a',
+  // site: 'https://www.geso.work',
+  // base: '/sumotsu_a',
 });
