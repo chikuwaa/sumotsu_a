@@ -8,13 +8,13 @@ interface ListItem {
 {lists[0].name !== "スモツ" && // index以外
 <aside id="pankuzu">
   <ul class="">
-    <li><a href="/top/">top</a></li>
+    <li><a href="/sumotsu_a/top/">top</a></li>
     {
       lists.map((list: ListItem, index: number) => (
        list.name  !== "top" && ( // top以外
         <li>
           {lists.length - 1 !== index ? (
-            <a href={`/${list.path}`}>{list.name}</a>
+            <a href={`/sumotsu_a/${list.path}`}>{list.name}</a>
             ) : (
             <span>{list.name}</span>
             )}
