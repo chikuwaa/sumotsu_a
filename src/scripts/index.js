@@ -23,7 +23,7 @@ function loginFunc(p) {
       searchResult.textContent = 'ログインしました';
       //トップ画面へ遷移
       setTimeout(function(){
-        window.location.href = './sumotsu_a/top/';
+        window.location.href = './top/';
       },500);
     }else{
       searchResult.textContent = 'パスワードが違います';

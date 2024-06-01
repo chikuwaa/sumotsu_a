@@ -22,9 +22,16 @@ if(date){ // 公開日が渡されていたら
   pub = startDate;
 }
 
+// 裏ページの時
+let id_url;
+if(ura){
+  id_url = url.split('/');
+  id_url.pop();
+}
+
 ---
 <li class="js-novelLink" >
-  {ura ? <a href="../ura/" id={ url.split('/').pop() }>{tit}</a> : <a href={url} >{tit}</a>}
+  {ura ? <a href="../ura/" id={ id_url.pop() }>{tit}</a> : <a href={url} >{tit}</a>}
   {startDate < pub && pub <= endDate && <span class="new">new</span>}
   <p class="naiyou_memo" set:html={desc}></p>
 </li>

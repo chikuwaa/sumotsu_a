@@ -4,4 +4,5 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://www.geso.work',
   base: '/sumotsu_a',
+  trailingSlash: "always"
 });

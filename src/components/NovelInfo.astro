@@ -1,6 +1,22 @@
 ---
 const { prevPage, nextPage } = Astro.props;
 
+// 裏ページの時
+let id_url_prev;
+let id_url_next;
+if(prevPage){
+  if(prevPage.frontmatter.ura){
+    id_url_prev = prevPage.url.split('/');
+    id_url_prev.pop();
+  }
+}
+if(nextPage){
+  if(nextPage.frontmatter.ura){
+  id_url_next = nextPage.url.split('/');
+  id_url_next.pop();
+}
+}
+
 ---
 <div class="novelInfo">
   <ul class="nav">
@@ -8,19 +24,19 @@ const { prevPage, nextPage } = Astro.props;
     {prevPage &&
     <li class="prev js-pagenationLink">
       {prevPage.frontmatter.ura
-        ? <a href="../ura/" id={ prevPage.url.split('/').pop() }>&lt; prev</a>
+        ? <a href="../../ura/" id={ id_url_prev.pop() }>&lt; prev</a>
         : <a href={prevPage.url}>&lt; prev</a>
       }
     </li>
     }
     <li>
-      <a href="./">一覧に戻る</a>
+      <a href="../">一覧に戻る</a>
     </li>
     <!--  次の記事（ある場合にのみ表示） -->
     {nextPage &&
     <li class="next js-pagenationLink">
       {nextPage.frontmatter.ura
-        ? <a href="../ura/" id={ nextPage.url.split('/').pop() }>next &gt;</a>
+        ? <a href="../../ura/" id={ id_url_next.pop() }>next &gt;</a>
         : <a href={nextPage.url}>next &gt;</a>
       }
     </li>
