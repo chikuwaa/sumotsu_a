@@ -1,0 +1,49 @@
+---
+// 新しい順に並ぶタイプのレイアウト
+import BaseLayout from './BaseLayout.astro';
+import Novelinfo from '../components/NovelInfo.astro';
+
+const { frontmatter } = Astro.props;
+const pageTitle = frontmatter.title;
+const pankuzuLists =[
+  {name: "txt" ,path:"txt/"},
+  {name: frontmatter.series , path:"txt/claplog/"},
+  {name: frontmatter.title }
+]
+
+const allPosts = await Astro.glob("../pages/txt/claplog/*.md");
+const sortedPosts = allPosts.sort((a, b) => {
+  const aDate = new Date(a.frontmatter.pubDate);
+  const bDate = new Date(b.frontmatter.pubDate);
+  return bDate.getTime() - aDate.getTime();
+});
+let nextPage , prevPage;
+sortedPosts.map(function(post, i){
+  if(post.url === frontmatter.url){
+    if(i + 1 === sortedPosts.length){
+      // 現在の投稿が最新の小説の場合
+      nextPage = "";
+    }else{
+      nextPage = sortedPosts[i + 1]
+    }
+    if(i === 0){
+      // 現在の投稿が1話目の場合
+      prevPage = "";
+    }else{
+      prevPage = sortedPosts[i - 1]
+    }
+  }
+})
+
+---
+<BaseLayout pageTitle={pageTitle} pankuzu ={pankuzuLists}>
+  <main id="novelPage">
+    <article class="novel">
+      <slot />
+    </article>
+    <Novelinfo {prevPage} {nextPage} />
+  </main>
+</BaseLayout>
+<script>
+  import "../scripts/lib/charm.js";
+</script>

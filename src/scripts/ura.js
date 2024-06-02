@@ -14,7 +14,7 @@ function passCheck(){
 function loginFunc(p) {
   const searchResult = document.querySelector('#search-result');
   const targetUrl = sessionStorage.getItem('sumotsu_url');
-  console.log(targetUrl);
+  // console.log(targetUrl);
   sha256(p).then(function(hash){
     if(hash == "2ac9a6746aca543af8dff39894cfe8173afba21eb01c6fae33d52947222855ef"){
       searchResult.textContent = '認証しました';
