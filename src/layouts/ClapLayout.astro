@@ -29,13 +29,16 @@ const pankuzuLists =[
 
     <div class="clap_repeat boder_dashed">
       <p class="mb1em">メッセージなしでも送れます。</p>
-      <form name="clap" method="post" action="/sumotsu_a/clap/clap1/" data-netlify="true" data-netlify-honeypot="bot-field">
+      <!-- <form name="clap" method="post" action="/sumotsu_a/clap/clap1/" data-netlify="true" data-netlify-honeypot="bot-field">
         <div style="display: none;">
           <input name="bot-field" />
         </div>
         <textarea name="message">ぱちぱち</textarea>
         <button type="submit">clap</button>
-      </form>
+      </form> -->
+      <textarea name="message">ぱちぱち</textarea>
+      <a href="/sumotsu_a/clap/clap1/" class="clap_dummy_btn">clap</a>
+
     </div>
   </main>
 </BaseLayout>
