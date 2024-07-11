@@ -104,6 +104,7 @@ ura.js内で修正してください。
 * 作成者 [げそ](https://github.com/chikuwaa)
 * Web https://www.geso.work/
 * OFUSE https://ofuse.me/08125c0c
+* ko-fi https://ko-fi.com/sumotsu4376
 
 ## ライセンス
 
