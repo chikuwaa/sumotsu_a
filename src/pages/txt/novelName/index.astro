@@ -10,7 +10,7 @@ const pankuzuLists =[
   {name: pageTitle }
 ]
 
-const allPosts = await Astro.glob('./*.md');
+const allPosts = Object.values(import.meta.glob('./*.md', { eager: true }));
 
 ---
 <BaseLayout pageTitle={pageTitle} pankuzu ={pankuzuLists}>

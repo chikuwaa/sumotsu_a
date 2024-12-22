@@ -10,7 +10,7 @@ const pankuzuLists =[
 
 import type { GetStaticPathsOptions } from 'astro';
 export async function getStaticPaths({ paginate }:GetStaticPathsOptions) {
-  const allPosts = await Astro.glob('./*.md');
+  const allPosts = Object.values(import.meta.glob('./*.md', { eager: true }));
   const sortedPosts = allPosts.sort((a, b) => {
     const aDate = new Date(a.frontmatter.receveDate);
     const bDate = new Date(b.frontmatter.receveDate);
