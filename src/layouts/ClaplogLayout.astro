@@ -11,7 +11,7 @@ const pankuzuLists =[
   {name: frontmatter.title }
 ]
 
-const allPosts = await Astro.glob("../pages/txt/claplog/*.md");
+const allPosts = Object.values(import.meta.glob('../pages/txt/claplog/*.md', { eager: true }));
 const sortedPosts = allPosts.sort((a, b) => {
   const aDate = new Date(a.frontmatter.pubDate);
   const bDate = new Date(b.frontmatter.pubDate);

@@ -5,8 +5,8 @@ const { pankuzuLists } = Astro.props;
 <Pankuzu lists = {pankuzuLists}/>
 <footer>
   <small class="since">since 20XX.XX.XX</small>
-{ Astro.url.pathname !== import.meta.env.BASE_URL && // index以外
-  <small class="policy"><a href="/sumotsu_a/policy/">site policy</a></small>
+{ Astro.url.href !== (Astro.url.origin+"/") && // index以外
+  <small class="policy"><a href="/policy/">site policy</a></small>
 }
   <small class="copywrite">&copy 20XX- your site name, All Rights Reserved.</small>
 </footer>

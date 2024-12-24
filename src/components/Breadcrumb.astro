@@ -5,7 +5,7 @@ interface ListItem {
   name: string;
 }
 ---
-{ Astro.url.pathname !== import.meta.env.BASE_URL && // index以外
+{ Astro.url.href !== (Astro.url.origin+"/") && // index以外
 <aside id="pankuzu">
   <ul class="">
     <li><a href="/sumotsu_a/top/">top</a></li>

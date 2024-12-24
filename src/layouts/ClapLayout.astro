@@ -7,7 +7,7 @@ const pankuzuLists =[
 ]
 
 // Netlify formsでお礼の切り替えができないため一旦削除
-// const allPosts = await Astro.glob("../pages/clap/*.md");
+// const allPosts = Object.values(import.meta.glob('../pages/clap/*.md', { eager: true }));
 // let nextPage;
 // allPosts.map(function(post, i){
 //   const { frontmatter } = Astro.props;

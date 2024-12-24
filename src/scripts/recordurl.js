@@ -16,7 +16,7 @@ titLink.forEach((tit) => {
   if(tit.children[0].id){
     tit.children[0].addEventListener('click',function(){
       // console.log(window.location.href+tit.children[0].id+"/");
-      recordUrl(window.location.href+tit.children[0].id+"/")
+      recordUrl(window.location.href+tit.children[0].id+"/");
     });
   }
 
@@ -30,7 +30,7 @@ pagenationLink.forEach((tit) => {
       originHref.pop();
       originHref.pop();
       const targetHref = originHref.join('/')
-      recordUrl(targetHref+"/"+tit.children[0].id+"/")
+      recordUrl(targetHref+"/"+tit.children[0].id+"/");
     });
   }
 

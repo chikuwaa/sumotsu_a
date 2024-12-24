@@ -9,7 +9,7 @@ const pankuzuLists =[
   {name: pageTitle }
 ]
 
-const allPosts = await Astro.glob('./*.md');
+const allPosts = Object.values(import.meta.glob('./*.md', { eager: true }));
 // 新着順に表示します
 const sortedPosts = allPosts.sort((a, b) => {
     const aDate = new Date(a.frontmatter.pubDate);
@@ -21,7 +21,7 @@ const sortedPosts = allPosts.sort((a, b) => {
 <BaseLayout pageTitle={pageTitle} pankuzu ={pankuzuLists}>
   <main id="novelList">
     <h2 class="tit_middle">[{pageTitle}]</h2>
-    <p class="mb1em">名前変換はありません<br>名称順ではなく、公開日(mdファイルpubDate)の新しい順に並びます。</p>
+    <p class="mb1em">名前変換はありません。<br>名称順ではなく、公開日(mdファイルpubDate)の新しい順に並びます。</p>
     <ul class="novelLinkList">
       {sortedPosts.map((post) => <NovelTitle tit={post.frontmatter.title} url={post.url} desc={post.frontmatter.description} ura={post.frontmatter.ura} date={post.frontmatter.pubDate} />)}
     </ul>

@@ -5,6 +5,10 @@ Astroを利用した夢小説用のサイトテンプレートです。
 
 [作者のサイト](https://sumotsu.geso.work) で使用しています。同様のサイトを作りたい方向けに、ソースの参考になればと思い公開しました。
 
+## デモサイト
+
+https://www.geso.work/sumotsu_a/
+
 ## 機能
 
 * 簡易ログイン ... パスワード認証のみ
@@ -66,7 +70,7 @@ index ... インデックスページ パスワードによるログインを設
 * html5
 * CSS3
 * JavaScript
-* Astro 4 ... [公式ページ](https://docs.astro.build/ja/getting-started/)
+* Astro 5 ... [公式ページ](https://docs.astro.build/ja/getting-started/)
 * Netlify ... [公式ページ](https://docs.netlify.com/)
 
 Web拍手、メッセージフォームでNetlify formsを使わない場合、Netlifyを使う必要はありません。
@@ -100,6 +104,7 @@ ura.js内で修正してください。
 * 作成者 [げそ](https://github.com/chikuwaa)
 * Web https://www.geso.work/
 * OFUSE https://ofuse.me/08125c0c
+* ko-fi https://ko-fi.com/sumotsu4376
 
 ## ライセンス
 
@@ -115,4 +120,6 @@ ura.js内で修正してください。
 
 最新の内容は[リポジトリ](https://github.com/chikuwaa/sumotsu_a)をご確認ください。
 
+- 2024/12/2X Astro5にバージョンアップ
+- 2024/6/2 デモサイト公開
 - 2024/3/19 公開

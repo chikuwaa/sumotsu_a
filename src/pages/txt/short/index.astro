@@ -10,7 +10,7 @@ const pankuzuLists =[
   {name: pageTitle }
 ]
 
-const allPosts = await Astro.glob('./*.md');
+const allPosts = Object.values(import.meta.glob('./*.md', { eager: true }));
 // 新着順に表示します
 const sortedPosts = allPosts.sort((a, b) => {
     const aDate = new Date(a.frontmatter.pubDate);
