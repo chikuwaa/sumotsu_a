@@ -1,12 +1,14 @@
 ---
 import Pankuzu from './Breadcrumb.astro';
 const { pankuzuLists } = Astro.props;
+const basePass = import.meta.env.BASE_URL;
+const comparePass = Astro.url.origin + basePass;
 ---
 <Pankuzu lists = {pankuzuLists}/>
 <footer>
   <small class="since">since 20XX.XX.XX</small>
-{ Astro.url.href !== (Astro.url.origin+"/") && // index以外
-  <small class="policy"><a href="/policy/">site policy</a></small>
+{ Astro.url.href !== comparePass && // index以外
+  <small class="policy"><a href={basePass+"policy/"}>site policy</a></small>
 }
   <small class="copywrite">&copy 20XX- your site name, All Rights Reserved.</small>
 </footer>

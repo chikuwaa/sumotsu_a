@@ -2,7 +2,7 @@
  * Charm.js License (Revised January 14, 2024)
  * Copyright (c) Mizuna Shima
  * Website: https://lanama.net/scripts/charm/
- * 
+ *
  * Subject to the conditions set forth below, anyone who obtains a copy of this script is granted permission to use it for commercial and non-commercial purposes free of charge.
  * Please adhere to the following usage rules:
  * 1. When used commercially or redistributed, significant parts must include the author's credit and the official distributor.
@@ -10,14 +10,14 @@
  * 3. Do not sell the script, nor any product primarily based on this script.
  * 4. Do not use the saved data from this script for monetary claims or requests for goods.
  * Even if the user modifies this script, these rules must be followed.
- * 
+ *
  * The author or copyright owner of this script shall not be liable for any damages or issues under any contract, tort, or other liabilities, in any case.
  */
 
 // Charm.js ver 2.4.1
 
 class Charm{
-  
+
   /***************      設定変更可能 ここから      ***************/
   // 登録する名前の入力フォームアイテム共通Class
   static nameClass = 'charm';
@@ -50,7 +50,7 @@ class Charm{
   static echoCountDefault = 2;
   // 詰まり回数のデフォルト
   static sttCountDefault = 2;
-  
+
   // クラスモード使用時に設定するクラス名
   static charmClassList = {
     // 名前省略（1文字）

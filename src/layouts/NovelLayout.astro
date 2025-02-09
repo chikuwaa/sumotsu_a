@@ -11,7 +11,7 @@ const pankuzuLists =[
   {name: frontmatter.title }
 ]
 
-const allPosts = await Astro.glob("../pages/txt/novelName/*.md");
+const allPosts = Object.values(import.meta.glob('../pages/txt/novelName/*.md', { eager: true }));
 let nextPage , prevPage;
 allPosts.map(function(post, i){
   if(post.url === frontmatter.url){

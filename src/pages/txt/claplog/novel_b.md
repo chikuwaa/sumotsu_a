@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/ClaplogLayout.astro
 title: 'サンプルB'
-series: '短編'
+series: '拍手ログ'
 pubDate: 2024-02-13
 description: ''
 author: 'げそ'

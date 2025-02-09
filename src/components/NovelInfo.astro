@@ -1,6 +1,5 @@
 ---
 const { prevPage, nextPage } = Astro.props;
-
 // 裏ページの時
 let id_url_prev;
 let id_url_next;
@@ -12,10 +11,11 @@ if(prevPage){
 }
 if(nextPage){
   if(nextPage.frontmatter.ura){
-  id_url_next = nextPage.url.split('/');
-  id_url_next.pop();
+    id_url_next = nextPage.url.split('/');
+    id_url_next.pop();
+  }
 }
-}
+
 ---
 <div class="novelInfo">
   <ul class="nav">

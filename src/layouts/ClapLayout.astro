@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+const basePass = import.meta.env.BASE_URL;
 
 const pageTitle = "clap";
 const pankuzuLists =[
@@ -7,7 +8,7 @@ const pankuzuLists =[
 ]
 
 // Netlify formsでお礼の切り替えができないため一旦削除
-// const allPosts = await Astro.glob("../pages/clap/*.md");
+// const allPosts = Object.values(import.meta.glob('../pages/clap/*.md', { eager: true }));
 // let nextPage;
 // allPosts.map(function(post, i){
 //   const { frontmatter } = Astro.props;
@@ -29,7 +30,7 @@ const pankuzuLists =[
 
     <div class="clap_repeat boder_dashed">
       <p class="mb1em">メッセージなしでも送れます。</p>
-      <form name="clap" method="post" action="/clap/clap1/" data-netlify="true" data-netlify-honeypot="bot-field">
+      <form name="clap" method="post" action={basePass+"/clap/clap1/"} data-netlify="true" data-netlify-honeypot="bot-field">
         <div style="display: none;">
           <input name="bot-field" />
         </div>

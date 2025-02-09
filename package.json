@@ -4,7 +4,7 @@
   "author": "geso (https://github.com/chikuwaa)",
   "homepage": "https://github.com/chikuwaa/sumotsu_a",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -13,7 +13,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/rss": "^4.0.5",
-    "astro": "^4.4.9"
+    "@astrojs/rss": "^4.0.10",
+    "astro": "^5.1.1"
   }
 }
