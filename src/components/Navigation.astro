@@ -1,12 +1,13 @@
 ---
 const {tit} = Astro.props;
+const basePass = import.meta.env.BASE_URL;
 ---
 {tit !== "index" &&
 <nav>
-  <a href="/sumotsu_a/info/" class="">info</a>
-  <a href="/sumotsu_a/txt/" class="">txt</a>
-  <a href="/sumotsu_a/clap/clap1/" class="">clap</a>
-  {/* <form name="clap" method="post" action="/sumotsu_a/clap/clap1/" data-netlify="true" data-netlify-honeypot="bot-field">
+  <a href={basePass+"info/"} class="">info</a>
+  <a href={basePass+"txt/"} class="">txt</a>
+  <a href={basePass+"clap/clap1/"} class="">clap</a>
+  {/* <form name="clap" method="post" action={basePass+"clap/clap1/"} data-netlify="true" data-netlify-honeypot="bot-field">
     <div style="display: none;">
       <input name="bot-field" />
       <textarea name="message">ぱちぱち</textarea>

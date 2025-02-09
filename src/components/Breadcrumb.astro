@@ -4,17 +4,19 @@ interface ListItem {
   path: string;
   name: string;
 }
+const basePass = import.meta.env.BASE_URL;
+const comparePass = Astro.url.origin + basePass;
 ---
-{ Astro.url.href !== (Astro.url.origin+"/") && // index以外
+{ Astro.url.href !== comparePass && // index以外
 <aside id="pankuzu">
   <ul class="">
-    <li><a href="/sumotsu_a/top/">top</a></li>
+    <li><a href={basePass+"top/"}>top</a></li>
     {
       lists.map((list: ListItem, index: number) => (
        list.name  !== "top" && ( // top以外
         <li>
           {lists.length - 1 !== index ? (
-            <a href={`/sumotsu_a/${list.path}`}>{list.name}</a>
+            <a href={basePass + list.path}>{list.name}</a>
             ) : (
             <span>{list.name}</span>
             )}

@@ -5,6 +5,7 @@ const pageTitle = "info";
 const pankuzuLists =[
   {name: pageTitle }
 ]
+const basePass = import.meta.env.BASE_URL;
 ---
 <BaseLayout pageTitle={pageTitle} pankuzu ={pankuzuLists}>
   <main id="info">
@@ -13,11 +14,11 @@ const pankuzuLists =[
     <h3 class="tit_normal">-map-</h3>
     <p>
       <a href="./">info</a>…ここ<br />
-      <a href="/sumotsu_a/txt/">txt</a>…夢置き場。<br />
+      <a href={basePass+"txt/"}>txt</a>…夢置き場。<br />
       clap…拍手です。現在お礼1種。デモでは表示確認用のためフォーム機能はついていません<br />
     </p>
     <p>
-      <a href="/sumotsu_a/rss.xml" target="_blank">RSS</a>も用意しています<br>
+      <a href={basePass+"rss.xml"} target="_blank">RSS</a>も用意しています<br>
       リンク先のURLをお使いのRSSリーダーに設定してください。
     </p>
     <h3 class="tit_normal">-pass-</h3>
@@ -30,10 +31,10 @@ const pankuzuLists =[
     <h3 class="tit_normal">-master-</h3>
     <p>
       サークル名：○○<br>
-      サークル主：○○[<a href="/message/">〒</a> / <a href="/re/">re;</a> / <a href="#" target="_blank" rel="me">pixiv</a> / <a href="#" target="_blank" rel="me">log</a>]<br />
+      サークル主：○○[<a href={basePass+"message/"}>〒</a> / <a href={basePass+"re/"}>re;</a> / <a href="#" target="_blank" rel="me">sns</a> / <a href="#" target="_blank" rel="me">blog</a>]<br />
       <br>
       自己紹介などを書きます。<br /> なにかありましたら郵便マークからメッセージが送れます。ご利用ください。 </p>
     <h3 class="tit_normal">-site policy-</h3>
-    <p> 個人情報の利用目的やアクセス解析などについては<a href="/sumotsu_a/policy/">こちら</a>で記載しています </p>
+    <p> 個人情報の利用目的やアクセス解析などについては<a href={basePass+"policy/"}>こちら</a>で記載しています </p>
   </main>
 </BaseLayout>
